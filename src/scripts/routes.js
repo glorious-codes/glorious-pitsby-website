@@ -1,11 +1,10 @@
+import homeView from '@scripts/home/views/home';
+
 const routes = [
   {
     path: '/',
     name: 'home',
-    component: {
-      name: 'home-view',
-      template: '<h1>Hello</h1>'
-    }
+    component: homeView
   }
 ];
 
