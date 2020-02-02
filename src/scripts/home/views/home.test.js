@@ -1,6 +1,6 @@
 import { shallowMount } from '@vue/test-utils';
 import viewport from '@scripts/base/components/viewport/viewport';
-import homeGreeting from '@scripts/home/components/home-greeting/home-greeting';
+import pHomePanel from '@scripts/home/components/home-panel/home-panel';
 import homeView from './home';
 
 describe('Home View', () => {
@@ -13,8 +13,8 @@ describe('Home View', () => {
     expect(wrapper.findAll(viewport).length).toEqual(1);
   });
 
-  it('should have contain a home greeting', () => {
+  it('should have contain a home panel', () => {
     const wrapper = mount();
-    expect(wrapper.findAll(homeGreeting).length).toEqual(1);
+    expect(wrapper.findAll(pHomePanel).length).toEqual(1);
   });
 });
