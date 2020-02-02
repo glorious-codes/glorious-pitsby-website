@@ -38,8 +38,7 @@
       "files": "src/images/**/*.*"
     },
     "dist": {
-      "root": "images/",
-      "filename": "[path][name].[ext]"
+      "root": "images/[name].[ext]"
     }
   },
   "fonts": {

@@ -1,7 +1,7 @@
 {
-  "name": "vue-rise",
+  "name": "gloruous-pitsby-website",
   "version": "0.1.0",
-  "description": "Vue Rise",
+  "description": "Pitsby Website",
   "scripts": {
     "build": "webpack",
     "format": "eslint ./src/**/*.js",
@@ -9,7 +9,7 @@
     "test": "jest",
     "deploy": "firebase deploy --non-interactive"
   },
-  "keywords": ["vue", "boilerplate"],
+  "keywords": ["Pitsby", "documentation", "tool", "website"],
   "author": "Rafael Camargo <hello@rafaelcamargo.com>",
   "license": "MIT",
   "devDependencies": {
