@@ -2,7 +2,7 @@ import '@styles/viewport.styl';
 import template from './viewport.html';
 
 const viewport = {
-  name: 'viewport',
+  name: 'p-viewport',
   template
 };
 
