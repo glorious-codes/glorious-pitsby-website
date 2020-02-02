@@ -1,0 +1,35 @@
+@require '_variables'
+@require '_mixins'
+
+$col-padding = 10px
+$col-max-size = 12
+
+.p-col
+  float left
+  padding 0 $col-padding
+  box-sizing border-box
+  input,
+  textarea
+    width 100%
+
+.p-col-label,
+.p-col-value
+  white-space nowrap
+  text-overflow ellipsis
+  overflow hidden
+
+.p-col-label
+  margin-bottom 5px
+  color $color-grey-semi-dark
+  font-size $font-size-xxs
+
+for $size in (1..$col-max-size)
+  .p-col-size-{$size}
+    width ($size/$col-max-size) * 100%
+
++breakpoint('xs')
+  .p-col
+    float left
+    width 100%
+    & + .p-col
+      margin-top 12px
