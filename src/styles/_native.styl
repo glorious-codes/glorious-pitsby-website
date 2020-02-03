@@ -51,16 +51,34 @@ input, textarea
   width 100%
   font-size $font-size-sm
   border 1px solid $color-grey
-  border-radius(4px)
+  border-radius(6px)
   box-sizing(border-box)
   +highlight()
     border 1px solid $color-purple
     outline 0
 
+button
+  min-width 100px
+  padding 10px 15px
+  background-color $color-blue
+  color $color-lightest
+  font-size $font-size-sm
+  font-weight bold
+  border 1px solid $color-blue
+  cursor pointer
+  border-radius(6px)
+  &:hover,
+  &:active,
+  &:focus
+    background-color lighten($color-blue, 5)
+    outline 0
+
 label
-  color $color-grey-dark
+  display block
+  margin-bottom 8px
+  color $color-lightest
   font-size $font-size-xxxs
-  font-weight 600
+  font-weight bold
   text-transform uppercase
 
 em
