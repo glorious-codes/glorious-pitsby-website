@@ -1,0 +1,23 @@
+@require '_variables'
+@require '_mixins'
+
+.p-features-list
+  display grid
+  grid-template-columns 1fr 1fr
+  grid-gap 80px 50px
+  margin-left 50px
+  h2
+    color $color-blue-light
+    font-size $font-size-sm
+    font-weight bold
+    text-transform uppercase
+  p
+    margin-top 10px
+    color $color-grey-dark
+    font-size $font-size-xs
+
++breakpoint('xs')
+  .p-features-list
+    grid-template-columns 1fr
+    grid-gap 50px
+    margin-left 0
