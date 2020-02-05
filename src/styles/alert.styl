@@ -1,0 +1,23 @@
+@require '_variables'
+@require '_mixins'
+
+theme($background-color, $color)
+  background-color $background-color
+  color $color
+  border-color alpha($color, .5)
+
+.p-alert
+  position relative
+  padding 10px
+  font-size $font-size-xs
+  border-width 1px
+  border-style solid
+  theme($color-grey-lighter, $color-grey-dark)
+  border-radius(6px)
+  box-sizing(border-box)
+  &.p-alert-danger
+    theme($color-red-lighter, $color-red-dark)
+    .p-alert-trigger
+      color $color-red-dark
+  &.p-alert-success
+    theme($color-green-lighter, $color-green-dark)
