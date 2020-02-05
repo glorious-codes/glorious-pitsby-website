@@ -1,0 +1,16 @@
+<div class="p-newsletter-form">
+  <form @submit="onSubmit">
+    <div class="p-newsletter-form-alert-container" v-if="alert">
+      <p-alert :theme="alert.theme">
+        {{ alert.message }}
+      </p-alert>
+    </div>
+    <label>Email Adress</label>
+    <div class="p-newsletter-form-elements">
+      <input type="email" v-model="email" required />
+      <button type="submit" :disabled="submitButton.disabled">
+        {{ submitButton.text }}
+      </button>
+    </div>
+  </form>
+</div>
