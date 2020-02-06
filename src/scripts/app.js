@@ -4,12 +4,14 @@ import VueRouter from 'vue-router';
 import routes from '@scripts/routes';
 import template from '@scripts/app.html';
 import analyticsService from '@scripts/base/services/analytics/analytics';
+import routeService from '@scripts/base/services/route/route';
 
 Vue.use(VueRouter);
 
 const router = new VueRouter({ routes, mode: 'history' });
 const app = { name: 'app', template };
 
+routeService.setRouter(router);
 analyticsService.init();
 
 /* eslint-disable no-unused-vars */
