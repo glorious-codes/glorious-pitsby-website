@@ -3,11 +3,14 @@ import Vue from '@vue';
 import VueRouter from 'vue-router';
 import routes from '@scripts/routes';
 import template from '@scripts/app.html';
+import analyticsService from '@scripts/base/services/analytics/analytics';
 
 Vue.use(VueRouter);
 
 const router = new VueRouter({ routes, mode: 'history' });
 const app = { name: 'app', template };
+
+analyticsService.init();
 
 /* eslint-disable no-unused-vars */
 const mountedApp = new Vue({
