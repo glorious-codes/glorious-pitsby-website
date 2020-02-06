@@ -4,8 +4,11 @@ export default {
   },
   ANALYTICS: {
     GOOGLE: {
-      ID: '',
-      BASE_URL: 'https://www.googletagmanager.com/gtag/js'
+      BASE_URL: 'https://www.googletagmanager.com/gtag/js',
+      ID: 'UA-157883890-2'
+    },
+    MIXPANEL: {
+      TOKEN: 'd63827cc563fc4196f281b8858a4a3f6'
     }
   },
   VERVET: {
