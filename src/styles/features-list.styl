@@ -6,6 +6,13 @@
   grid-template-columns 1fr 1fr
   grid-gap 80px 50px
   margin-left 50px
+  .p-icon
+    position absolute
+    top -4px
+    left 0
+    width 28px
+    height 28px
+    background-color $color-blue-light
   h2
     color $color-blue-light
     font-size $font-size-sm
@@ -15,6 +22,9 @@
     margin-top 10px
     color $color-grey-dark
     font-size $font-size-xs
+  li
+    position relative
+    padding-left 38px
 
 +breakpoint('xs')
   .p-features-list
