@@ -8,7 +8,7 @@ describe('Home View', () => {
     return shallowMount(homeView);
   }
 
-  it('should have contain a viewport', () => {
+  it('should contain a viewport', () => {
     const wrapper = mount();
     expect(wrapper.findAll(viewport).length).toEqual(1);
   });
