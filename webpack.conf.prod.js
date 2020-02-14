@@ -33,9 +33,9 @@ module.exports = {
     }),
     new PrerenderSPAPlugin({
       staticDir: `${__dirname}/${project.scripts.dist.root}`,
-      // Include here static routes that you wish pre compile.
       routes: [
-        '/' // Home
+        '/',
+        '/privacy'
       ],
       minify: {
         collapseBooleanAttributes: true,
