@@ -23,9 +23,21 @@
           <p-newsletter-form />
         </p-col>
       </p-row>
+      <p-row vertical-offset="2">
+        <p-col size="12">
+          <router-link :to="{ name: 'privacy' }">
+            Privacy matters
+          </router-link>
+        </p-col>
+      </p-row>
     </p-col>
     <p-col size="8">
       <p-features-list />
+    </p-col>
+  </p-row>
+  <p-row vertical-offset="10">
+    <p-col size="12">
+      <p-credits />
     </p-col>
   </p-row>
 </div>

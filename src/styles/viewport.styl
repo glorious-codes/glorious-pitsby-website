@@ -1,6 +1,13 @@
+@require '_mixins'
+
 .p-viewport
   position relative
   margin 0 auto
+  padding 150px 0 50px
   min-height 100vh
   background rgba(0,9,25,1)
   background linear-gradient(130deg, rgba(1,34,101,1) 0%, rgba(0,9,25,1) 45%)
+
++breakpoint('xs')
+  .p-viewport
+    padding 75px 0 50px

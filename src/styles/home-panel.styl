@@ -2,12 +2,11 @@
 @require '_mixins'
 
 .p-home-panel
-  display flex
-  align-items center
-  min-height 100vh
   h1
     font-size $font-size-xl
     font-weight bold
+  a
+    font-size $font-size-xs
 
 .p-home-panel-logo-container
   position relative
@@ -22,6 +21,5 @@
 +breakpoint('xs')
   .p-home-panel
     display block
-    padding 50px 0
     .p-features-list
       margin-top 50px

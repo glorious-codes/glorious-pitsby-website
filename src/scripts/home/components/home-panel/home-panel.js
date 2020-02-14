@@ -1,5 +1,6 @@
 import '@styles/home-panel.styl';
 import pCol from '@scripts/base/components/col/col';
+import pCredits from '@scripts/base/components/credits/credits';
 import pLogo from '@scripts/base/components/logo/logo';
 import pFeaturesList from '@scripts/base/components/features-list/features-list';
 import pNewsletterForm from '@scripts/base/components/newsletter-form/newsletter-form';
@@ -11,6 +12,7 @@ const pHomePanel = {
   name: 'p-home-panel',
   components: {
     pCol,
+    pCredits,
     pLogo,
     pNewsletterForm,
     pFeaturesList,
