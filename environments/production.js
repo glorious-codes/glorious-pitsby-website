@@ -1,6 +1,6 @@
 export default {
   APP: {
-    BASE_URL: ''
+    BASE_URL: 'https://pitsby.com'
   },
   ANALYTICS: {
     GOOGLE: {
