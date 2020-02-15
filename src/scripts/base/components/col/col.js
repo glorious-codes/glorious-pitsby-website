@@ -3,18 +3,13 @@ import template from './col.html';
 
 export default {
   name: 'p-col',
-  props: ['size'],
-  data(){
-    return {
-      sizeCssClass: ''
-    };
-  },
-  created(){
-    this.setSizeCssClass(this.size);
-  },
-  methods: {
-    setSizeCssClass(size){
-      this.sizeCssClass = size ? `p-col-size-${size}` : '';
+  props: ['size', 'offset'],
+  computed: {
+    classes(){
+      return {
+        [`p-col-size-${this.size}`]: this.size,
+        [`p-col-offset-${this.offset}`]: this.offset
+      };
     }
   },
   template

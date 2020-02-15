@@ -27,9 +27,15 @@ for $size in (1..$col-max-size)
   .p-col-size-{$size}
     width ($size/$col-max-size) * 100%
 
+for $size in (1..11)
+  .p-col-offset-{$size}
+    margin-left ($size/12) * 100%
+
 +breakpoint('xs')
   .p-col
     float left
     width 100%
     & + .p-col
       margin-top 12px
+  [class*=p-col-offset]
+    margin-left 0
