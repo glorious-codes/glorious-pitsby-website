@@ -11,9 +11,14 @@ describe('Row', () => {
     expect(wrapper.classes()).toContain('p-row');
   });
 
-  it('should look vertical centered', () => {
+  it('should optionally center child elements vertically', () => {
     const wrapper = mountComponent({verticalCentered: true});
     expect(wrapper.classes().includes('p-row-vertical-centered')).toEqual(true);
+  });
+
+  it('should optionally center child elements horizontally', () => {
+    const wrapper = mountComponent({horizontalCentered: true});
+    expect(wrapper.classes().includes('p-row-horizontal-centered')).toEqual(true);
   });
 
   it('should allow vertical offset option', () => {
