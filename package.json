@@ -9,7 +9,12 @@
     "test": "jest",
     "deploy": "firebase deploy --non-interactive"
   },
-  "keywords": ["Pitsby", "documentation", "tool", "website"],
+  "keywords": [
+    "Pitsby",
+    "documentation",
+    "tool",
+    "website"
+  ],
   "author": "Rafael Camargo <hello@rafaelcamargo.com>",
   "license": "MIT",
   "devDependencies": {
@@ -43,6 +48,7 @@
   "dependencies": {
     "axios": "^0.19.0",
     "vue": "^2.6.11",
+    "vue-head": "^2.2.0",
     "vue-router": "^3.1.5"
   }
 }
