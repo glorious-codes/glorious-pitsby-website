@@ -1,5 +1,6 @@
 import { shallowMount } from '@vue/test-utils';
 import newsletterResource from '@scripts/base/resources/newsletter';
+import analyticsService from '@scripts/base/services/analytics/analytics';
 import pNewsletterForm from './newsletter-form';
 
 describe('Newsletter Form', () => {
@@ -22,6 +23,10 @@ describe('Newsletter Form', () => {
   function submitForm(wrapper){
     wrapper.find('form').trigger('submit');
   }
+
+  beforeEach(() => {
+    analyticsService.trackEvent = jest.fn();
+  });
 
   it('should have appropriate class', () => {
     const wrapper = mount();
@@ -71,8 +76,17 @@ describe('Newsletter Form', () => {
     submitForm(wrapper);
     expect(wrapper.vm.alert.theme).toEqual('success');
     expect(wrapper.vm.alert.message).toEqual(
-      'Thanks! You\'ll be notified as soon as we launch Pitsby.'
+      'Thanks! You\'ll be notified as soon as I launch Pitsby.'
     );
+  });
+
+  it('should track subscription on submit success', () => {
+    const email = 'some@email.com';
+    const wrapper = mount();
+    stubNewsletterPost('success');
+    wrapper.find('input').setValue(email);
+    submitForm(wrapper);
+    expect(analyticsService.trackEvent).toHaveBeenCalledWith('subscribed', { email });
   });
 
   it('should clear email on submit success', () => {

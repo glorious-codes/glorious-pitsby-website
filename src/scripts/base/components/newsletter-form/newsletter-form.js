@@ -1,6 +1,7 @@
 import '@styles/newsletter-form.styl';
 import pAlert from '@scripts/base/components/alert/alert';
 import newsletterResource from '@scripts/base/resources/newsletter';
+import analyticsService from '@scripts/base/services/analytics/analytics';
 import template from './newsletter-form.html';
 
 const pNewsletterForm = {
@@ -30,9 +31,10 @@ const pNewsletterForm = {
       }).then(this.onSubmitSuccess, this.onSubmitError);
     },
     onSubmitSuccess(){
+      analyticsService.trackEvent('subscribed', { email: this.email });
       this.setAlert({
         theme: 'success',
-        message: 'Thanks! You\'ll be notified as soon as we launch Pitsby.'
+        message: 'Thanks! You\'ll be notified as soon as I launch Pitsby.'
       });
       this.setEmail('');
       this.onSubmitComplete();
