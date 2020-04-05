@@ -1,9 +1,9 @@
 import '@styles/logo.styl';
 import template from './logo.html';
 
-const viewport = {
+const pLogo = {
   name: 'p-logo',
   template
 };
 
-export default viewport;
+export default pLogo;
