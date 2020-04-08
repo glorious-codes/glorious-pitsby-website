@@ -1,0 +1,25 @@
+@require '_variables'
+@require '_mixins'
+
+$arrow-link-text-color = #00B6FF
+$arrow-link-text-color-hover = lighten($arrow-link-text-color, 25%)
+
+.p-arrow-link
+  position relative
+  a
+    padding-right 40px
+    color $arrow-link-text-color
+    font-size $font-size-md
+    font-weight bold
+    text-transform uppercase
+    border 0
+    .p-icon
+      position absolute
+      right 0
+      top 50%
+      background-color $arrow-link-text-color
+      transform('translateY(-55%)')
+    &:hover
+      color $arrow-link-text-color-hover
+      .p-icon
+        background-color $arrow-link-text-color-hover
