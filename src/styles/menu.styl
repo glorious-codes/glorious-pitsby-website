@@ -1,0 +1,18 @@
+@require '_variables';
+@require '_mixins';
+
+.p-menu
+  ul
+    margin 0
+    padding 0
+  li
+    display inline-block
+    &:not(:first-child)
+      margin-left 40px
+  a
+    font-size $font-size-xxs
+    font-weight bold
+    text-transform uppercase
+    border 0
+    +highlight()
+      color $color-blue-light

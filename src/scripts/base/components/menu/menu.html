@@ -1,0 +1,12 @@
+<nav class="p-menu">
+  <ul>
+    <li v-for="item in items">
+      <p-link
+        :href="item.href"
+        :target="item.target"
+        :routeName="item.to">
+        {{ item.text }}
+      </p-link>
+    </li>
+  </ul>
+</nav>
