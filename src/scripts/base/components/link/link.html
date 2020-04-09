@@ -1,0 +1,8 @@
+<span class="p-link">
+  <router-link v-if="routeName" :to="{ name: routeName }">
+    <slot></slot>
+  </router-link>
+  <a v-if="href" :href="href" :target="target">
+    <slot></slot>
+  </a>
+</span>
