@@ -1,5 +1,6 @@
 import pCol from '@scripts/base/components/col/col';
 import pContainer from '@scripts/base/components/container/container';
+import pLink from '@scripts/base/components/link/link';
 import pLogo from '@scripts/base/components/logo/logo';
 import pRow from '@scripts/base/components/row/row';
 import pViewport from '@scripts/base/components/viewport/viewport';
@@ -22,6 +23,7 @@ const privacyView = {
   components: {
     pCol,
     pContainer,
+    pLink,
     pLogo,
     pRow,
     pViewport
