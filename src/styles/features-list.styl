@@ -3,28 +3,29 @@
 
 .p-features-list
   display grid
-  grid-template-columns 1fr 1fr
+  grid-template-columns 1fr 1fr 1fr
   grid-gap 80px 50px
-  margin-left 50px
+  margin 0 auto
+  max-width 1080px
+  text-align center
   .p-icon
     position absolute
-    top -4px
-    left 0
-    width 28px
-    height 28px
-    background-color $color-blue-light
+    top -50px
+    left 50%
+    width 40px
+    height 40px
+    background-color $color-blue
+    transform('translateX(-50%)')
   h2
-    color $color-blue-light
-    font-size $font-size-sm
+    color $color-blue
+    font-size $font-size-xl
     font-weight bold
-    text-transform uppercase
   p
     margin-top 10px
     color $color-grey-dark
     font-size $font-size-xs
   li
     position relative
-    padding-left 38px
 
 +breakpoint('xs')
   .p-features-list

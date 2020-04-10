@@ -1,5 +1,10 @@
+import pCol from '@scripts/base/components/col/col';
+import pContainer from '@scripts/base/components/container/container';
+import pFeaturesList from '@scripts/base/components/features-list/features-list';
 import pHomeHero from '@scripts/home/components/home-hero/home-hero';
 import pViewport from '@scripts/base/components/viewport/viewport';
+import pRow from '@scripts/base/components/row/row';
+import pSection from '@scripts/base/components/section/section';
 import seoService from '@scripts/base/services/seo/seo';
 import template from './home.html';
 
@@ -12,7 +17,12 @@ const head = seoService.buildHead({
 const homeView = {
   name: 'p-home-view',
   components: {
+    pCol,
+    pContainer,
+    pFeaturesList,
     pHomeHero,
+    pRow,
+    pSection,
     pViewport
   },
   head,
