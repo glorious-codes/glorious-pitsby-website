@@ -1,0 +1,21 @@
+.p-section
+  padding 180px 0
+  &.p-section-secondary
+    background-color $color-grey-lighter
+
+.p-section-title
+  position relative
+  margin-bottom 100px
+  padding-bottom 10px
+  font-size $font-size-xxl
+  text-align center
+  letter-spacing -1px
+  &:after
+    position absolute
+    bottom 0
+    left 50%
+    content ' '
+    width 50px
+    height 3px
+    background-color $color-blue
+    transform('translateX(-50%)')
