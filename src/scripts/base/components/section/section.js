@@ -6,6 +6,9 @@ const pSection = {
   props: {
     theme: {
       type: String
+    },
+    title: {
+      type: String
     }
   },
   computed: {
