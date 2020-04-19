@@ -4,6 +4,9 @@ import template from './section.html';
 const pSection = {
   name: 'p-section',
   props: {
+    id: {
+      type: String
+    },
     theme: {
       type: String
     },
