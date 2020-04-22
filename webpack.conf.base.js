@@ -15,7 +15,11 @@ module.exports = {
         use: 'html-loader'
       },
       {
-        test: /\.(styl|css)$/,
+        test: /\.css$/,
+        use: [ MiniCssExtractPlugin.loader, 'css-loader' ]
+      },
+      {
+        test: /\.styl$/,
         use: [ MiniCssExtractPlugin.loader, 'css-loader', 'stylus-loader' ]
       },
       {
