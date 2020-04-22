@@ -1,6 +1,6 @@
 <p-viewport>
   <p-home-hero />
-  <p-section>
+  <p-section title="Features" id="features">
     <p-container>
       <p-row>
         <p-col size="12">
@@ -9,11 +9,27 @@
       </p-row>
     </p-container>
   </p-section>
-  <p-section theme="secondary">
+  <p-section title="Basics" theme="secondary" id="basics">
     <p-container>
       <p-row>
         <p-col size="12">
-          <h2>Basics</h2>
+          <p-basic-usage />
+        </p-col>
+      </p-row>
+    </p-container>
+  </p-section>
+  <p-section title="Seamless. Beautiful. Declarative.">
+    <p-container>
+      <p-row>
+        <p-col size="2" offset="4">
+          <p-button theme="primary" block>
+            Live Demo
+          </p-button>
+        </p-col>
+        <p-col size="2">
+          <p-button theme="secondary" block>
+            Full Docs
+          </p-button>
         </p-col>
       </p-row>
     </p-container>
