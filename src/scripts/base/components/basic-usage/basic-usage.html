@@ -1,0 +1,43 @@
+<div class="p-basic-usage">
+  <ul>
+    <li class="p-basic-usage-item">
+      <p-pill text="Install" />
+      <p>
+        Pitsby is available via <i>npm</i>.
+      </p>
+      <p-code>npm install -g @glorious/pitsby</p-code>
+    </li>
+    <li class="p-basic-usage-item">
+      <p-pill text="Setup" />
+      <p>
+        Pitsby is based on two types of file. Choose a technology to see how simple they are.
+      </p>
+      <p-setup />
+    </li>
+    <li class="p-basic-usage-item">
+      <p-pill text="Build" />
+      <p>
+        Once you have set up a <i>configuration file</i> and, at least, one <i>
+        documentation file</i>, you can easily generate the website running:
+      </p>
+      <p-code>pitsby build</p-code>
+      <p>
+        You can see the result serving it
+        with <p-link href="https://www.npmjs.com/package/http-server">http-server</p-link>
+        or any other lib that you prefer:
+      </p>
+      <p-code>http-server ./pitsby</p-code>
+    </li>
+    <li class="p-basic-usage-item">
+      <p-pill text="Watch" />
+      <p>
+        To keep Pitsby watching the changes that you make on any file listed on
+        on the <i>configuration file</i>, run:
+      </p>
+      <p-code>pitsby build --watch</p-code>
+      <p>
+        The website will be running on <i>http://localhost:7000</i>.
+      </p>
+    </li>
+  </ul>
+</div>
