@@ -1,0 +1,52 @@
+@require '_variables'
+@require '_mixins'
+
+@keyframes showup
+  0%
+    opacity .2
+    transform('translate3d(0,15px,0)')
+  100%
+    opacity 1
+    transform('translate3d(0,0,0)')
+
+.p-setup
+  .p-setup-editor-legend
+    margin 40px auto 0
+    max-width 400px
+
+.p-setup-engine-list
+  margin 0 auto 40px
+  max-width 600px
+
+.p-setup-engine-item
+  display inline-block
+  &:not(:first-child)
+    margin-left 20px
+
+.p-setup-code-wrapper
+  display grid
+  grid-template-columns 1fr 1fr
+  grid-gap 0 20px
+
+.p-setup-editor-container
+  margin 0 auto
+  max-width 500px
+  min-height 800px
+  text-align left
+  .desktop
+    position relative
+    animation showup 250ms
+    animation-timing-function ease-out
+  .editor-application
+    .editor-line-text
+      color $color-blue-light
+    .application
+      background-color #142948
+    .application-content-container
+      background-color #183055
+
++breakpoint('xs')
+  .p-setup-code-wrapper
+    display grid
+    grid-template-columns 1fr
+    grid-gap 40px 0

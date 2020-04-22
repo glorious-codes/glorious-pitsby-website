@@ -1,0 +1,42 @@
+<div class="p-setup">
+  <p-row>
+    <p-col size="12">
+      <ul class="p-setup-engine-list">
+        <li
+          class="p-setup-engine-item"
+          v-for="engine in engines"
+          data-setup-engine-item>
+          <input
+            type="radio"
+            v-model="selectedEngine"
+            :value="engine.value"
+            :id="engine.value" />
+          <label :for="engine.value">{{ engine.text }}</label>
+        </li>
+      </ul>
+    </p-col>
+  </p-row>
+  <p-row>
+    <p-col size="12">
+      <div class="p-setup-code-wrapper">
+        <div class="p-setup-code">
+          <div class="p-setup-editor-container" data-setup-container-configuration></div>
+          <p class="p-setup-editor-legend">
+            Pitsby configuration should be created in the root directory of the
+            project which you want the website will be created for. It’s
+            responsible to tell Pitsby where <i>*.doc.js</i> files are, among
+            other things.
+          </p>
+        </div>
+        <div class="p-setup-code">
+          <div class="p-setup-editor-container" data-setup-container-documentation></div>
+          <p class="p-setup-editor-legend">
+            You should create one <i>*.doc.js</i> file per component per engine. If
+            your project makes components available for more than one technology,
+            each of them needs to have its own <i>*doc.js</i> file.
+          </p>
+        </div>
+      </div>
+    </p-col>
+  </p-row>
+</div>
