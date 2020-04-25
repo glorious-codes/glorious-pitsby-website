@@ -13,7 +13,7 @@ describe('Home View', () => {
     expect(wrapper.findAll(viewport).length).toEqual(1);
   });
 
-  it('should have contain a home panel', () => {
+  it('should contain a home panel', () => {
     const wrapper = mount();
     expect(wrapper.findAll(pHomeHero).length).toEqual(1);
   });
