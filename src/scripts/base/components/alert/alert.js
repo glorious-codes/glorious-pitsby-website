@@ -4,17 +4,30 @@ import template from './alert.html';
 const pAlert = {
   name: 'p-alert',
   props: {
-    theme: String
+    theme: {
+      type: String
+    },
+    triggerText: {
+      type: String,
+      default: 'Retry'
+    },
+    onTriggerClick: {
+      type: Function
+    }
   },
   computed: {
     classes(){
       return {
-        'p-alert-success': this.theme == 'success',
-        'p-alert-danger': this.theme == 'danger'
+        [`p-alert-${this.theme}`]: isThemeValid(this.theme),
+        'p-alert-has-trigger': this.onTriggerClick
       };
     }
   },
   template
 };
+
+function isThemeValid(theme){
+  return ['success', 'danger'].includes(theme);
+}
 
 export default pAlert;

@@ -8,12 +8,12 @@ theme($background-color, $color)
 
 .p-alert
   position relative
-  padding 10px
+  padding 12px
   font-size $font-size-xs
   border-width 1px
   border-style solid
-  theme($color-grey-lighter, $color-grey-dark)
-  border-radius(6px)
+  theme($color-yellow-lighter, $color-yellow-darker)
+  border-radius(4px)
   box-sizing(border-box)
   &.p-alert-danger
     theme($color-red-lighter, $color-red-dark)
@@ -21,3 +21,22 @@ theme($background-color, $color)
       color $color-red-dark
   &.p-alert-success
     theme($color-green-lighter, $color-green-dark)
+  &.p-alert-has-trigger
+    padding-right 100px
+  ul
+    padding-left 30px
+    list-style-type disc
+  li
+    margin-top 20px
+
+.p-alert-trigger
+  position absolute
+  top 15px
+  right 15px
+  padding 0
+  background-color transparent
+  text-transform uppercase
+  font-weight 600
+  cursor pointer
+  border 0
+  webkit-appearance(none)
