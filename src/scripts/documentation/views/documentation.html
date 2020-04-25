@@ -1,0 +1,72 @@
+<p-viewport>
+  <p-hero
+    title="Documentation" />
+  <p-section title="Overview">
+    <p-container>
+      <p-row>
+        <p-col size="6" offset="3">
+          <p>
+            Pitsby aims to be the easiest tool for generating a documentation
+            website for your components, offering support for legacy and modern
+            technologies. No rules. No loaders. No regex. Get a documentation
+            website up and running with few super simple declarations.
+          </p>
+        </p-col>
+      </p-row>
+    </p-container>
+  </p-section>
+  <p-section title="The Configuration File" theme="secondary">
+    <p-container>
+      <p-row>
+        <p-col size="6" offset="3">
+          <p>
+            This is Pitsby's configuration file. <i>pitsby.config.js</i>
+            should be created in the root directory of the project which you
+            want the documentation will be created for.
+          </p>
+        </p-col>
+      </p-row>
+      <p-row vertical-offset="4">
+        <p-col size="8" offset="2">
+          <p-static-editor
+            name="configuration"
+            :code="code.configuration"
+            min-height="1730px"
+            window-title="pitsby.config.js" />
+        </p-col>
+      </p-row>
+    </p-container>
+  </p-section>
+  <p-section title="The Documentation File">
+    <p-container>
+      <p-row>
+        <p-col size="6" offset="3">
+          <p>
+            You should create one <i>*.doc.js</i> file per component per engine.
+            That said, be careful about:
+          </p>
+          <ul>
+            <li>
+              If you have a button component written in Vue and a button
+              component written in React, both will need their own .doc.js.
+            </li>
+            <li>
+              The file below is just an example of how you write documentation
+              files considering all supported technologies. On practice, you
+              shouldn't ever mix technologies in the same <i>*.doc.js</i>.
+            </li>
+          </ul>
+        </p-col>
+      </p-row>
+      <p-row vertical-offset="4">
+        <p-col size="8" offset="2">
+          <p-static-editor
+            name="documentation"
+            :code="code.documentation"
+            min-height="3530px"
+            window-title="button.doc.js" />
+        </p-col>
+      </p-row>
+    </p-container>
+  </p-section>
+</p-viewport>

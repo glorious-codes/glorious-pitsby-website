@@ -35,6 +35,7 @@ module.exports = {
       staticDir: `${__dirname}/${project.scripts.dist.root}`,
       routes: [
         '/',
+        '/documentation',
         '/privacy'
       ],
       minify: {
