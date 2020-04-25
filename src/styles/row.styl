@@ -11,10 +11,9 @@
     align-items center
   &.p-row-horizontal-centered
     text-align center
-
-for $size in (1..10)
-  .p-row-vertical-offset-{$size}
-    margin-top $size * 10px
+  for $size in (1..10)
+    &.p-row-vertical-offset-{$size}
+      margin-top $size * 10px
 
 +breakpoint('xs')
   .p-row
