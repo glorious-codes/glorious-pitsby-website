@@ -1,8 +1,12 @@
-<button
+<component
+  :is="tag"
+  :to="to"
   class="p-button"
   :class="classes"
   :type="buttonType"
+  :href="href"
+  :target="target"
   :disabled="disabled"
   @click="onButtonClick()">
   <slot></slot>
-</button>
+</component>

@@ -10,6 +10,19 @@ const pButton = {
     theme: {
       type: String
     },
+    tag: {
+      type: String,
+      default: 'button'
+    },
+    href: {
+      type: String
+    },
+    to: {
+      type: [String, Object]
+    },
+    target: {
+      type: String,
+    },
     block: {
       type: Boolean
     },
@@ -33,7 +46,8 @@ const pButton = {
       };
     },
     buttonType(){
-      return isTypeValid(this.type) ? this.type : 'button';
+      if(this.tag == 'button')
+        return buildButtonType(this.type);
     }
   },
   template
@@ -41,6 +55,10 @@ const pButton = {
 
 function isThemeValid(theme){
   return ['primary', 'secondary'].includes(theme);
+}
+
+function buildButtonType(type){
+  return isTypeValid(type) ? type : 'button';
 }
 
 function isTypeValid(type){

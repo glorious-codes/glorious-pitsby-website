@@ -22,6 +22,29 @@ describe('Button', () => {
     expect(wrapper.attributes('type')).toEqual(type);
   });
 
+  it('should optionally set component HTML tag', () => {
+    const wrapper = mount({ tag: 'a' });
+    expect(wrapper.vm.$el.tagName).toEqual('A');
+  });
+
+  it('should optionally set an anchor href', () => {
+    const href = 'https://pitsby.com';
+    const wrapper = mount({ tag: 'a', href });
+    expect(wrapper.attributes('href')).toEqual(href);
+  });
+
+  it('should optionally set an anchor target', () => {
+    const target = '_blank';
+    const wrapper = mount({ tag: 'a', target });
+    expect(wrapper.attributes('target')).toEqual(target);
+  });
+
+  it('should optionally render component as router link', () => {
+    const to = "{ name: 'home' }";
+    const wrapper = mount({ to });
+    expect(wrapper.attributes('to')).toEqual(to);
+  });
+
   it('should optionally set a primary theme', () => {
     const wrapper = mount({ theme: 'primary' });
     expect(wrapper.classes()).toContain('p-button-primary');
