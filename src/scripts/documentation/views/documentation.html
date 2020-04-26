@@ -3,19 +3,44 @@
     title="Documentation" />
   <p-section title="Overview">
     <p-container>
-      <p-row>
-        <p-col size="6" offset="3">
+      <p-row horizontal-centered>
+        <p-col size="12">
           <p>
-            Pitsby aims to be the easiest tool for generating a documentation
-            website for your components, offering support for legacy and modern
-            technologies. No rules. No loaders. No regex. Get a documentation
-            website up and running with few super simple declarations.
+            Pitsby is based on two types of file:
           </p>
+        </p-col>
+      </p-row>
+      <p-row vertical-offset="4">
+        <p-col size="6" offset="3">
+          <ul>
+            <li>
+              <p-link href="#config" target="_self">
+              Configuration File</p-link> <i>(pitsby.config.js)</i><br />
+              Responsible for telling Pitsby where the documentation files are
+              and, informing all the assets that should be included in the
+              documentation website, integrations, customizations and other
+              project related things.
+            </li>
+            <li>
+              <p-link href="#doc" target="_self">
+              Documentation File</p-link> <i>(*.doc.js)</i><br />
+              Used by Pitsby to build the page that contains all the component
+              details.
+            </li>
+          </ul>
+          <p-row horizontal-centered vertical-offset="4">
+            <p-col size="12">
+              <p>
+                To know how to install and run Pitsby,
+                see <p-link href="/#basics" target="_self">Basic Usage</p-link>.
+              </p>
+            </p-col>
+          </p-row>
         </p-col>
       </p-row>
     </p-container>
   </p-section>
-  <p-section title="The Configuration File" theme="secondary">
+  <p-section title="The Configuration File" theme="secondary" id="config">
     <p-container>
       <p-row>
         <p-col size="6" offset="3">
@@ -37,25 +62,30 @@
       </p-row>
     </p-container>
   </p-section>
-  <p-section title="The Documentation File">
+  <p-section title="The Documentation File" id="doc">
     <p-container>
-      <p-row>
-        <p-col size="6" offset="3">
+      <p-row horizontal-centered>
+        <p-col size="8" offset="2">
           <p>
             You should create one <i>*.doc.js</i> file per component per engine.
             That said, be careful about:
           </p>
-          <ul>
-            <li>
-              If you have a button component written in Vue and a button
-              component written in React, both will need their own .doc.js.
-            </li>
-            <li>
-              The file below is just an example of how you write documentation
-              files considering all supported technologies. On practice, you
-              shouldn't ever mix technologies in the same <i>*.doc.js</i>.
-            </li>
-          </ul>
+        </p-col>
+      </p-row>
+      <p-row vertical-offset="4">
+        <p-col size="6" offset="3">
+            <ul>
+              <li>
+                If you have a button component written in Vue and a button
+                component written in React, both will need their own
+                documentation file.
+              </li>
+              <li>
+                The file below is just an example of how you write documentation
+                files considering all supported technologies. On practice, you
+                shouldn't ever mix technologies in the same <i>*.doc.js</i>.
+              </li>
+            </ul>
         </p-col>
       </p-row>
       <p-row vertical-offset="4">
@@ -65,6 +95,43 @@
             :code="code.documentation"
             min-height="3530px"
             window-title="button.doc.js" />
+        </p-col>
+      </p-row>
+    </p-container>
+  </p-section>
+  <p-section title="Give it a look" theme="secondary">
+    <p-container>
+      <p-row>
+        <p-col size="6" offset="3">
+          <p>
+            To help you understand even better how to setup Pitsby in your
+            project as well as give you the opportunity to see a sample
+            documentation website without having to wire all the things up,
+            Pitsby has a live demonstration and all that code is available on
+            its <p-link href="https://github.com/glorious-codes/glorious-pitsby-demo">
+            Github repository</p-link>.
+          </p>
+        </p-col>
+      </p-row>
+      <p-row vertical-offset="8">
+        <p-col size="2" offset="4">
+          <p-button
+            tag="a"
+            theme="primary"
+            href="https://demo.pitsby.com"
+            target="_blank"
+            block>
+            Live Demo
+          </p-button>
+        </p-col>
+        <p-col size="2">
+          <p-button
+            tag="a"
+            href="/#basics"
+            theme="secondary"
+            block>
+            Basic Usage
+          </p-button>
         </p-col>
       </p-row>
     </p-container>
