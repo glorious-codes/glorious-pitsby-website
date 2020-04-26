@@ -22,13 +22,22 @@
     <p-container>
       <p-row>
         <p-col size="2" offset="4">
-          <p-button theme="primary" block>
+          <p-button
+            tag="a"
+            theme="primary"
+            href="https://demo.pitsby.com"
+            target="_blank"
+            block>
             Live Demo
           </p-button>
         </p-col>
         <p-col size="2">
-          <p-button theme="secondary" block>
-            Full Docs
+          <p-button
+            tag="router-link"
+            theme="secondary"
+            :to="{ name: 'documentation' }"
+            block>
+            Documentation
           </p-button>
         </p-col>
       </p-row>
