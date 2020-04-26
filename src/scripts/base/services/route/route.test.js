@@ -19,6 +19,7 @@ describe('Route Service', () => {
   beforeEach(() => {
     mockRouterInstance();
     window.open = jest.fn();
+    window.scrollTo = jest.fn();
     analyticsService.trackPageView = jest.fn();
     routeService.setRouter(router);
   });
@@ -101,5 +102,14 @@ describe('Route Service', () => {
       path: toPathMock
     });
     expect(analyticsService.trackPageView).toHaveBeenCalledWith(toPathMock);
+  });
+
+  it('should scroll to top on route navigation', () => {
+    const toPathMock = '/mock';
+    routeService.setRouter(router);
+    router.afterHooks[0]({
+      path: toPathMock
+    });
+    expect(window.scrollTo).toHaveBeenCalledWith(0,0);
   });
 });
