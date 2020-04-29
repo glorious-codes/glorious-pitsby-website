@@ -13,7 +13,7 @@ describe('Menu', () => {
 
   it('should contain four items', () => {
     const wrapper = mount();
-    expect(wrapper.findAll('li').length).toEqual(4);
+    expect(wrapper.findAll('li').length).toEqual(5);
   });
 
   it('should execute item click listener on menu item click', () => {

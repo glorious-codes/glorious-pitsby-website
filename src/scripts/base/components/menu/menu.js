@@ -18,6 +18,7 @@ const pMenu = {
         { text: 'Features', href: '/#features', target: '_self' },
         { text: 'Basics', href: '/#basics', target: '_self' },
         { text: 'Documentation', to: 'documentation' },
+        { text: 'Recommendations', href: '/#recommendations', target: '_self' },
         { text: 'Contribute', href: 'https://github.com/glorious-codes/glorious-pitsby', target: '_blank' }
       ]
     };
