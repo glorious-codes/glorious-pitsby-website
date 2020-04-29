@@ -20,6 +20,9 @@ const pButton = {
     to: {
       type: [String, Object]
     },
+    faceless: {
+      type: Boolean
+    },
     target: {
       type: String,
     },
@@ -42,7 +45,8 @@ const pButton = {
     classes(){
       return {
         [`p-button-${this.theme}`]: isThemeValid(this.theme),
-        'p-button-block': this.block
+        'p-button-block': this.block,
+        'p-button-faceless': this.faceless
       };
     },
     buttonType(){

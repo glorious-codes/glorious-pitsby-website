@@ -45,3 +45,11 @@ themed-button($text-color, $bg-color, $border-color)
       border-color alpha($color-blue, .5)
   &.p-button-block
     width 100%
+  &.p-button-faceless
+    min-width 0
+    background-color transparent
+    line-height 1
+    border 0
+    +highlight()
+      background-color transparent
+      border 0

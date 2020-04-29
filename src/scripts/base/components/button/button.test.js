@@ -70,6 +70,11 @@ describe('Button', () => {
     expect(wrapper.attributes('disabled')).toBeTruthy();
   });
 
+  it('should optionally be faceless', () => {
+    const wrapper = mount({ faceless: true });
+    expect(wrapper.classes()).toContain('p-button-faceless');
+  });
+
   it('should execute click callback on click', () => {
     const onClick = jest.fn();
     const wrapper = mount({ onClick });
