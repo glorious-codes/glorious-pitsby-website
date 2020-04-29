@@ -23,13 +23,6 @@ export default {
     INITIAL: `module.exports = {
   name: 'Button',
   description: 'Abstraction of a native button.',
-  properties: [
-    {
-      name: 'on-click',
-      type: '<void> Function',
-      values: 'any'
-    }
-  ],
   examples: [
     {
       title: 'Default Button',
