@@ -1,0 +1,21 @@
+<div class="p-sidebar">
+  <p-button
+    class="p-sidebar-menu-button"
+    :onClick="toggleSidebarVisibility"
+    data-sidebar-menu-button
+    faceless>
+    <p-icon name="menu" />
+  </p-button>
+  <div class="p-sidebar-content"
+    :class="sidebarVisibilityCssClass"
+    data-sidebar-content>
+    <p-button
+      class="p-sidebar-arrow-button"
+      :onClick="toggleSidebarVisibility"
+      data-sidebar-arrow-button
+      faceless>
+      <p-icon name="arrow" />
+    </p-button>
+    <p-menu />
+  </div>
+</div>
