@@ -18,5 +18,15 @@ export default [
     jobTitle: 'Programmer',
     companyName: 'Ebanx',
     companyUrl: 'https://business.ebanx.com/en/'
+  },
+  {
+    id: 3,
+    name: 'Fernando Rodrigues',
+    imageUrl: 'https://rafaelcamargo.com/assets/images/avatar-rodrigues.jpeg',
+    socialUrl: 'https://www.linkedin.com/in/fernahh/',
+    testimonial: 'I love the playground feature. An easy and isolated way to play with components.',
+    jobTitle: 'Programmer',
+    companyName: 'Quinto Andar',
+    companyUrl: 'https://www.quintoandar.com.br/'
   }
 ];
