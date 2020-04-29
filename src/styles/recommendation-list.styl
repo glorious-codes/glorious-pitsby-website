@@ -1,0 +1,37 @@
+@require '_variables'
+@require '_mixins'
+
+.p-recommendation-list
+  display grid
+  grid-template-columns 1fr 1fr
+  grid-gap 100px 20px
+  margin 0 auto
+  padding 0
+  max-width 900px
+  list-style-type none
+  p
+    margin 30px auto 0
+    max-width 300px
+    font-family $font-family-tertiary
+
+.p-recommendation-item
+  text-align center
+  & + .p-recommendation-item
+    margin-top 0
+
+.p-recommendation-item-image
+  margin 0 auto 10px
+  width 100px
+  height 100px
+  border-radius 150px
+  overflow hidden
+  img
+    width 100%
+
+.p-recommendation-item-footer
+  margin-top 20px
+  font-size $font-size-xxs
+
++breakpoint('xs')
+  .p-recommendation-list
+    grid-template-columns 1fr

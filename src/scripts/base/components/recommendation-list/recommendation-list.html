@@ -1,0 +1,23 @@
+<ul class="p-recommendation-list">
+  <li
+    class="p-recommendation-item"
+    v-for="recommendation in recommendations"
+    :key="recommendation.id">
+    <div class="p-recommendation-item-image">
+      <img :src="recommendation.imageUrl" :alt="recommendation.name" />
+    </div>
+    <h3>
+      <p-link :href="recommendation.socialUrl" target="_blank">
+        {{ recommendation.name }}
+      </p-link>
+    </h3>
+    <p>
+      {{ recommendation.testimonial }}
+    </p>
+    <footer class="p-recommendation-item-footer">
+      {{ recommendation.jobTitle }} at <p-link :href="recommendation.companyUrl" target="_blank">
+        {{ recommendation.companyName }}
+      </p-link>
+    </footer>
+  </li>
+</ul>
