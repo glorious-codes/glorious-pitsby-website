@@ -7,6 +7,11 @@ const pMenu = {
   components: {
     pLink
   },
+  props: {
+    onItemClick: {
+      type: Function
+    }
+  },
   data(){
     return {
       items: [
@@ -16,6 +21,11 @@ const pMenu = {
         { text: 'Contribute', href: 'https://github.com/glorious-codes/glorious-pitsby', target: '_blank' }
       ]
     };
+  },
+  methods: {
+    onMenuItemClick(item){
+      return this.onItemClick && this.onItemClick(item);
+    }
   },
   template
 };

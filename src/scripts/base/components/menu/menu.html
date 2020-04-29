@@ -4,7 +4,8 @@
       <p-link
         :href="item.href"
         :target="item.target"
-        :routeName="item.to">
+        :routeName="item.to"
+        :onClick="onMenuItemClick">
         {{ item.text }}
       </p-link>
     </li>
