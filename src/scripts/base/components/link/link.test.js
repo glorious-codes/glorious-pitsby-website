@@ -38,9 +38,17 @@ describe('Link', () => {
     expect(wrapper.find('a').attributes('target')).toEqual('_blank');
   });
 
-  it('should anchor links optiaonlly contain a custom target attribute', () => {
+  it('should anchor links optionally contain a custom target attribute', () => {
     const target = '_self'
     const wrapper = mountComponent({ href: '#basics', target });
     expect(wrapper.find('a').attributes('target')).toEqual(target);
+  });
+
+  it('should execute click listener on link click', () => {
+    const link = { href: 'https://pitsby.com', routeName: 'home', target: '_self' };
+    const onClick = jest.fn();
+    const wrapper = mountComponent({ onClick, ...link });
+    wrapper.vm.onLinkClick();
+    expect(onClick).toHaveBeenCalledWith(link);
   });
 });

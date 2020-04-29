@@ -1,8 +1,8 @@
 <span class="p-link">
-  <router-link v-if="routeName" :to="{ name: routeName }">
+  <router-link v-if="routeName" :to="{ name: routeName }" @click="onLinkClick()">
     <slot></slot>
   </router-link>
-  <a v-if="href" :href="href" :target="target">
+  <a v-if="href" :href="href" :target="target" @click="onLinkClick()">
     <slot></slot>
   </a>
 </span>

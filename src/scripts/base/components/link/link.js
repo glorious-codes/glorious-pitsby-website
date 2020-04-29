@@ -12,6 +12,15 @@ export default {
     },
     routeName: {
       type: String
+    },
+    onClick: {
+      type: Function
+    }
+  },
+  methods: {
+    onLinkClick(){
+      const { routeName, href, target } = this;
+      return this.onClick && this.onClick({ routeName, href, target });
     }
   },
   template
