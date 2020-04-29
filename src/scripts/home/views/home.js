@@ -4,6 +4,7 @@ import pCol from '@scripts/base/components/col/col';
 import pContainer from '@scripts/base/components/container/container';
 import pFeaturesList from '@scripts/base/components/features-list/features-list';
 import pHomeHero from '@scripts/home/components/home-hero/home-hero';
+import pRecommendationList from '@scripts/base/components/recommendation-list/recommendation-list';
 import pRow from '@scripts/base/components/row/row';
 import pSection from '@scripts/base/components/section/section';
 import seoService from '@scripts/base/services/seo/seo';
@@ -25,6 +26,7 @@ const homeView = {
     pContainer,
     pFeaturesList,
     pHomeHero,
+    pRecommendationList,
     pRow,
     pSection,
     pViewport
