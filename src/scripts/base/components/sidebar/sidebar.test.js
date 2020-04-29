@@ -22,4 +22,18 @@ describe('Sidebar', () => {
     wrapper.vm.toggleSidebarVisibility();
     expect(wrapper.vm.sidebarVisibilityCssClass).toEqual('');
   });
+
+  it('should hide sidebar when user clicks on a link self targeted', () => {
+    const wrapper = mount();
+    wrapper.vm.toggleSidebarVisibility();
+    wrapper.vm.onMenuItemClick({ target: '_self' });
+    expect(wrapper.vm.sidebarVisibilityCssClass).toEqual('');
+  });
+
+  it('should not hide sidebar when user clicks on a link not self targeted', () => {
+    const wrapper = mount();
+    wrapper.vm.toggleSidebarVisibility();
+    wrapper.vm.onMenuItemClick({ target: '_blank' });
+    expect(wrapper.vm.sidebarVisibilityCssClass).toEqual('p-sidebar-content-visible');
+  });
 });

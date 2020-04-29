@@ -25,6 +25,10 @@ const pSidebar = {
     },
     setSidebarVisibilityCssClass(cssClass){
       this.sidebarVisibilityCssClass = cssClass;
+    },
+    onMenuItemClick(item){
+      if(item.target == '_self')
+        this.setSidebarVisibilityCssClass('');
     }
   },
   template
