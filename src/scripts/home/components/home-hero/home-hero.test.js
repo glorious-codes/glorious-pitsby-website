@@ -19,7 +19,7 @@ describe('Home Hero', () => {
   });
 
   it('should contain a hero description', () => {
-    const description = 'Create a beautiful documentation for your components, writing dead simple files.';
+    const description = 'Create beautiful documentation for your components, writing dead simple files.';
     const wrapper = mount();
     expect(wrapper.find(pHero).attributes('description')).toEqual(description);
   });
