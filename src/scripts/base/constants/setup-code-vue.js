@@ -4,7 +4,7 @@ export default {
   projects: [
     {
       engine: 'vue',
-      collectDocsFrom: './src/scripts/vue',
+      collectDocsFrom: './src/components',
       importFrom: './dist/vueComponents',
       libraryName: 'vueComponents'
       // Should be actionable like a plugin:
@@ -12,10 +12,10 @@ export default {
     }
   ],
   styles: [
-    './dist/vueComponents.css'
+    './dist/vueComponents.min.css'
   ],
   scripts: [
-    './dist/vueComponents.js'
+    './dist/vueComponents.min.js'
   ],
   other: [
     './dist/images/'

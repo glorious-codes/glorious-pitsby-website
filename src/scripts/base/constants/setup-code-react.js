@@ -4,14 +4,14 @@ export default {
   projects: [
     {
       engine: 'react',
-      collectDocsFrom: './src/scripts/react'
+      collectDocsFrom: './src/components'
     }
   ],
   styles: [
-    './dist/reactComponents.css'
+    './dist/reactComponents.min.css'
   ],
   scripts: [
-    './dist/reactComponents.js'
+    './dist/reactComponents.min.js'
   ],
   other: [
     './dist/images/'

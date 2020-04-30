@@ -4,14 +4,14 @@ export default {
   projects: [
     {
       engine: 'vanilla',
-      collectDocsFrom: './src/scripts/vanilla'
+      collectDocsFrom: './src/components'
     }
   ],
   styles: [
-    './dist/vanillaComponents.css'
+    './dist/vanillaComponents.min.css'
   ],
   scripts: [
-    './dist/vanillaComponents.js'
+    './dist/vanillaComponents.min.js'
   ],
   other: [
     './dist/images/'

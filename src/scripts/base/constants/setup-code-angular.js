@@ -4,15 +4,15 @@ export default {
   projects: [
     {
       engine: 'angular',
-      collectDocsFrom: './src/scripts/angular',
+      collectDocsFrom: './src/components',
       moduleName: 'angularComponents'
     }
   ],
   styles: [
-    './dist/angularComponents.css'
+    './dist/angularComponents.min.css'
   ],
   scripts: [
-    './dist/angularComponents.js'
+    './dist/angularComponents.min.js'
   ],
   other: [
     './dist/images/'
