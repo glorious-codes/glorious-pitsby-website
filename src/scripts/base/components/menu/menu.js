@@ -1,5 +1,6 @@
 import '@styles/menu.styl';
 import pLink from '@scripts/base/components/link/link';
+import analyticsService from '@scripts/base/services/analytics/analytics';
 import template from './menu.html';
 
 const pMenu = {
@@ -25,6 +26,7 @@ const pMenu = {
   },
   methods: {
     onMenuItemClick(item){
+      analyticsService.trackEvent('clicked menu item', item);
       return this.onItemClick && this.onItemClick(item);
     }
   },
