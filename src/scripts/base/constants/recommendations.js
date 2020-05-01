@@ -28,5 +28,15 @@ export default [
     jobTitle: 'Programmer',
     companyName: 'Quinto Andar',
     companyUrl: 'https://www.quintoandar.com.br/'
+  },
+  {
+    id: 4,
+    name: 'Julio Lozovei',
+    imageUrl: '/images/avatar-lozovei.jpeg',
+    socialUrl: 'https://www.linkedin.com/in/jlozovei/',
+    testimonial: 'Pitsby is utterly awesome and easy - no more pain while documentating components, specially Vanilla!',
+    jobTitle: 'Programmer',
+    companyName: 'Paraná Banco',
+    companyUrl: 'https://www.paranabanco.com.br/'
   }
 ];
