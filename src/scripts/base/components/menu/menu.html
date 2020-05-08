@@ -1,6 +1,6 @@
 <nav class="p-menu">
   <ul>
-    <li v-for="item in items">
+    <li v-for="item in items" :class="item.cssClass">
       <p-link
         :href="item.href"
         :target="item.target"
@@ -8,6 +8,11 @@
         :onClick="onMenuItemClick">
         {{ item.text }}
       </p-link>
+    </li>
+    <li class="p-menu-item-github-button">
+      <p-github-button-widget
+        username="glorious-codes"
+        repositoryName="glorious-pitsby" />
     </li>
   </ul>
 </nav>

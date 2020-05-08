@@ -18,7 +18,7 @@ describe('Menu', () => {
 
   it('should contain four items', () => {
     const wrapper = mount();
-    expect(wrapper.findAll('li').length).toEqual(5);
+    expect(wrapper.findAll('li').length).toEqual(6);
   });
 
   it('should track menu item click', () => {

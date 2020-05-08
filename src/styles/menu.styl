@@ -2,6 +2,13 @@
 @require '_mixins';
 
 .p-menu
+  .p-menu-item-github-button
+    min-width 74px
+  .p-github-button-widget
+    position relative
+    top 5px
+  .p-menu-item-contribute
+    display none
   ul
     margin 0
     padding 0
@@ -23,3 +30,10 @@
       &:hover
         cursor none
         pointer-events none
+
++breakpoint('xs')
+  .p-menu
+    .p-menu-item-github-button
+      display none
+    .p-menu-item-contribute
+      display inline-block
