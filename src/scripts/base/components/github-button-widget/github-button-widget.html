@@ -1,10 +1,12 @@
-<span class="p-github-button-widget">
-  <a
-    class="github-button"
-    :href="repositoryLink"
-    data-icon="octicon-star"
-    data-show-count="true"
-    :aria-label="ariaLabel">
-    Star
-  </a>
+<span class="p-github-button-widget" :class="cssClass">
+  <span class="p-github-button-widget-link-container">
+    <a
+      class="github-button"
+      :href="repositoryLink"
+      data-icon="octicon-star"
+      data-show-count="true"
+      :aria-label="ariaLabel">
+      Star
+    </a>
+  </span>
 </span>

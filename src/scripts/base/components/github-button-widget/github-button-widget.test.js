@@ -1,3 +1,4 @@
+import Vue from '@vue';
 import { shallowMount } from '@vue/test-utils';
 import pGithubButtonWidget from './github-button-widget';
 
@@ -5,6 +6,8 @@ describe('Github Button Widget', () => {
   function mountComponent(propsData){
     return shallowMount(pGithubButtonWidget, { propsData });
   }
+
+  jest.useFakeTimers();
 
   afterEach(() => {
     const tag = document.querySelector('[data-github-script-tag]');
@@ -51,5 +54,19 @@ describe('Github Button Widget', () => {
     mountComponent();
     const tags = document.body.querySelectorAll('[data-github-script-tag]');
     expect(tags.length).toEqual(1);
+  });
+
+  it('should not show github button link container on mount', () => {
+    const wrapper = mountComponent();
+    expect(wrapper.classes()).not.toContain('p-github-button-widget-visible');
+  });
+
+  it('should show github button link container 750ms after mount', done => {
+    const wrapper = mountComponent();
+    jest.advanceTimersByTime(750);
+    Vue.nextTick(() => {
+      expect(wrapper.classes()).toContain('p-github-button-widget-visible');
+      done();
+    });
   });
 });

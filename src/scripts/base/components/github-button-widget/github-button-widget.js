@@ -14,7 +14,8 @@ export default {
   data(){
     return {
       repositoryLink: null,
-      ariaLabel: null
+      ariaLabel: null,
+      cssClass: '',
     };
   },
   mounted(){
@@ -22,6 +23,7 @@ export default {
     this.setRepositoryLink(this.buildRepositoryLink(slug));
     this.setAriaLabel(this.buildAriaLabel(slug));
     this.appendGithubScriptTagOnBody(this.getGithubScriptTag());
+    setTimeout(() => this.setCssClass('p-github-button-widget-visible'), 750);
   },
   methods: {
     buildRepositorySlug(username, repositoryName){
@@ -59,6 +61,9 @@ export default {
       tag.setAttribute('defer', '');
       tag.setAttribute('src', 'https://buttons.github.io/buttons.js');
       return tag;
+    },
+    setCssClass(cssClass){
+      this.cssClass = cssClass;
     }
   },
   template
