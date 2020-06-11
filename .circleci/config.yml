@@ -34,7 +34,7 @@ jobs:
 
       - run:
           name: Test
-          command: npm run test -- --coverage --coverageReporters=lcov && ./node_modules/codecov/bin/codecov
+          command: NODE_OPTIONS=--max_old_space_size=4096 npm run test -- --coverage --coverageReporters=lcov && ./node_modules/codecov/bin/codecov
 
       - run:
           name: Deploy
