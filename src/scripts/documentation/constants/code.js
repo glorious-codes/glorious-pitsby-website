@@ -124,8 +124,6 @@ module.exports = {
         function setGreeting(greeting){
           $ctrl.greeting = greeting;
         }
-
-        $ctrl.$onInit();
       },
       dependencies: ['$window'],
       template: \`
