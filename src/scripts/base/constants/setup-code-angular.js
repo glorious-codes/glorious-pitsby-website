@@ -27,7 +27,7 @@ export default {
   properties: [
     {
       name: 'on-click',
-      type: '<void> Function',
+      type: 'Function',
       values: 'any'
     }
   ],

@@ -25,8 +25,8 @@ export default {
   description: 'Abstraction of a native button.',
   properties: [
     {
-      name: 'on-click',
-      type: '<void> Function',
+      name: 'onClick',
+      type: 'Function',
       values: 'any'
     }
   ],
