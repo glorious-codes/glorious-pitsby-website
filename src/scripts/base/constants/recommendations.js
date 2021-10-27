@@ -17,7 +17,7 @@ export default [
     testimonial: 'Easy and maintainable!',
     jobTitle: 'Programmer',
     companyName: 'RD Station',
-    companyUrl: 'https://www.linkedin.com/company/rd-station/'
+    companyUrl: 'https://www.rdstation.com/'
   },
   {
     id: 3,
