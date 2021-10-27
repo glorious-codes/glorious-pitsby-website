@@ -34,7 +34,7 @@ export default [
     name: 'Julio Lozovei',
     imageUrl: '/images/avatar-lozovei.jpeg',
     socialUrl: 'https://www.linkedin.com/in/jlozovei/',
-    testimonial: 'Pitsby is utterly awesome and easy - no more pain while documentating components, specially Vanilla!',
+    testimonial: 'Pitsby is utterly awesome and easy - no more pain while documenting components, specially Vanilla!',
     jobTitle: 'Programmer',
     companyName: 'Paraná Banco',
     companyUrl: 'https://www.paranabanco.com.br/'
