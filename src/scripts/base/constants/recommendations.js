@@ -16,8 +16,8 @@ export default [
     socialUrl: 'https://www.linkedin.com/in/jim-chien/',
     testimonial: 'Easy and maintainable!',
     jobTitle: 'Programmer',
-    companyName: 'Ebanx',
-    companyUrl: 'https://business.ebanx.com/en/'
+    companyName: 'RD Station',
+    companyUrl: 'https://www.linkedin.com/company/rd-station/'
   },
   {
     id: 3,
