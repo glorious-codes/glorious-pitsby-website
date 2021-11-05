@@ -16,8 +16,8 @@ export default [
     socialUrl: 'https://www.linkedin.com/in/jim-chien/',
     testimonial: 'Easy and maintainable!',
     jobTitle: 'Programmer',
-    companyName: 'Ebanx',
-    companyUrl: 'https://business.ebanx.com/en/'
+    companyName: 'RD Station',
+    companyUrl: 'https://www.rdstation.com/'
   },
   {
     id: 3,
@@ -34,9 +34,9 @@ export default [
     name: 'Julio Lozovei',
     imageUrl: '/images/avatar-lozovei.jpeg',
     socialUrl: 'https://www.linkedin.com/in/jlozovei/',
-    testimonial: 'Pitsby is utterly awesome and easy - no more pain while documentating components, specially Vanilla!',
+    testimonial: 'Pitsby is utterly awesome and easy - no more pain while documenting components, specially Vanilla!',
     jobTitle: 'Programmer',
-    companyName: 'Paraná Banco',
-    companyUrl: 'https://www.paranabanco.com.br/'
+    companyName: 'Trybe',
+    companyUrl: 'https://www.betrybe.com/'
   }
 ];
