@@ -36,7 +36,7 @@ export default [
     socialUrl: 'https://www.linkedin.com/in/jlozovei/',
     testimonial: 'Pitsby is utterly awesome and easy - no more pain while documenting components, specially Vanilla!',
     jobTitle: 'Programmer',
-    companyName: 'Paraná Banco',
-    companyUrl: 'https://www.paranabanco.com.br/'
+    companyName: 'Trybe',
+    companyUrl: 'https://www.betrybe.com/'
   }
 ];
