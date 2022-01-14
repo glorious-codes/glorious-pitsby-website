@@ -48,7 +48,7 @@
   },
   "dependencies": {
     "@glorious/demo": "^0.11.2",
-    "axios": "^0.21.1",
+    "axios": "^0.21.2",
     "prismjs": "^1.25.0",
     "vue": "^2.6.11",
     "vue-head": "^2.2.0",
