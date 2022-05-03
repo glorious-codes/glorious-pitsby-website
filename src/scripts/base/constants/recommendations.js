@@ -2,7 +2,7 @@ export default [
   {
     id: 1,
     name: 'Lucas Cunha',
-    imageUrl: '/images/avatar-cunha.jpg',
+    imageUrl: '/images/avatar-cunha.jpeg',
     socialUrl: 'https://www.linkedin.com/in/lucas-felipe-da-cunha-06628969/',
     testimonial: 'Pitsby makes developers\' life really easy. No hassle, no pain, only gain.',
     jobTitle: 'Programmer',
@@ -12,7 +12,7 @@ export default [
   {
     id: 2,
     name: 'Jim Chien',
-    imageUrl: '/images/avatar-jim.jpg',
+    imageUrl: '/images/avatar-jim.jpeg',
     socialUrl: 'https://www.linkedin.com/in/jim-chien/',
     testimonial: 'Easy and maintainable!',
     jobTitle: 'Programmer',
