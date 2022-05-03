@@ -2,7 +2,7 @@ export default [
   {
     id: 1,
     name: 'Lucas Cunha',
-    imageUrl: 'https://rafaelcamargo.com/assets/images/avatar-cunha.jpg',
+    imageUrl: '/images/avatar-cunha.jpg',
     socialUrl: 'https://www.linkedin.com/in/lucas-felipe-da-cunha-06628969/',
     testimonial: 'Pitsby makes developers\' life really easy. No hassle, no pain, only gain.',
     jobTitle: 'Programmer',
@@ -12,17 +12,17 @@ export default [
   {
     id: 2,
     name: 'Jim Chien',
-    imageUrl: 'https://rafaelcamargo.com/assets/images/avatar-jim.jpg',
+    imageUrl: '/images/avatar-jim.jpg',
     socialUrl: 'https://www.linkedin.com/in/jim-chien/',
     testimonial: 'Easy and maintainable!',
     jobTitle: 'Programmer',
-    companyName: 'RD Station',
-    companyUrl: 'https://www.rdstation.com/'
+    companyName: 'Origin',
+    companyUrl: 'https://www.useorigin.com/'
   },
   {
     id: 3,
     name: 'Fernando Rodrigues',
-    imageUrl: 'https://rafaelcamargo.com/assets/images/avatar-rodrigues.jpeg',
+    imageUrl: '/images/avatar-rodrigues.jpeg',
     socialUrl: 'https://www.linkedin.com/in/fernahh/',
     testimonial: 'I love the playground feature. An easy and isolated way to play with components.',
     jobTitle: 'Programmer',
