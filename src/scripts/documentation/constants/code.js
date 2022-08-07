@@ -11,6 +11,7 @@ module.exports = {
       engine: 'react',
       collectDocsFrom: './src/react',
       // You may optionally declare some specific React version (Default: 16.13.0)
+      // NOTE: For now, Pitsby has no support for React 18.
       version: '16.8.0'
     },
     {
@@ -20,6 +21,7 @@ module.exports = {
       // Pitsby will look for this name as a global variable.
       libraryName: 'myVueComponents'
       // You may optionally declare some specific Vue version (Default: 2.5.13)
+      // NOTE: For now, Pitsby has no support for Vue 3.
       version: '2.6.0'
     },
     {
