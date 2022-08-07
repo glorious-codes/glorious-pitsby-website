@@ -16,7 +16,6 @@ module.exports = {
     {
       engine: 'vue',
       collectDocsFrom: './src/vue',
-      importFrom: './dist/my-vue-components',
       // The name of your library according UMD (Universal Module Definition).
       // Pitsby will look for this name as a global variable.
       libraryName: 'myVueComponents'
