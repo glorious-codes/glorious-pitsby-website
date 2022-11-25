@@ -30,16 +30,18 @@ module.exports = {
     }
   ],
   styles: [
-    './dist/my-angular-components.css',
-    './dist/my-react-components.css',
-    './dist/my-vue-components.css',
-    './dist/my-vanilla-components.css'
+    './dist/my-styles.css',
+    // You can optionally declare an object representing
+    // the link tag attributes:
+    { href: './dist/other.css', rel: 'stylesheet' },
+    { href: './dist/any-other.css', rel: 'prefetch', as: 'style' }
   ],
   scripts: [
-    './dist/my-angular-components.js',
-    './dist/my-react-components.js',
-    './dist/my-vue-components.js',
-    './dist/my-vanilla-components.js'
+    './dist/my-components.js',
+    // You can optionally declare an object representing
+    // the script tag attributes:
+    { src: './dist/es6/components.js', type: 'module' },
+    { src: 'https://some.cdn.com/lib.js', crossorigin: '' }
   ],
   other: [
     './dist/images/',
