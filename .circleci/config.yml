@@ -4,7 +4,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:12-browsers
+      - image: circleci/node:16-browsers
 
     steps:
       - checkout
@@ -17,7 +17,7 @@ jobs:
 
       - run:
           name: Install
-          command: ./.circleci/install_shared_deps.sh && npm install
+          command: npm install
 
       - save_cache:
           paths:
