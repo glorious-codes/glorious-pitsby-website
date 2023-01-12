@@ -41,7 +41,12 @@ module.exports = {
     // You can optionally declare an object representing
     // the script tag attributes:
     { src: './dist/es6/components.js', type: 'module' },
-    { src: 'https://some.cdn.com/lib.js', crossorigin: '' }
+    { src: 'https://some.cdn.com/lib.js', crossorigin: '' },
+    // In addition to the native HTML attributes for a script tag,
+    // you can use the Boolean "inline" property to indicate whether
+    // a script must be presented inline. This is the case of "importmaps",
+    // since browsers still don't support importmap coming from external sources.
+    { src: './src/doc.importmap.js', type: 'importmap', inline: true }
   ],
   other: [
     './dist/images/',
