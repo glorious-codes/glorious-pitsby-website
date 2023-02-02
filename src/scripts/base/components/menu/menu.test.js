@@ -16,9 +16,9 @@ describe('Menu', () => {
     expect(wrapper.classes()).toContain('p-menu');
   });
 
-  it('should contain four items', () => {
+  it('should contain seven items', () => {
     const wrapper = mount();
-    expect(wrapper.findAll('li').length).toEqual(6);
+    expect(wrapper.findAll('li').length).toEqual(7);
   });
 
   it('should track menu item click', () => {
