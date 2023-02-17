@@ -17,6 +17,11 @@ const pTopbar = {
     pMenu,
     pRow
   },
+  props: {
+    hideMenu: {
+      type: Boolean
+    }
+  },
   template
 };
 

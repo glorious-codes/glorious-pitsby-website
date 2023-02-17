@@ -1,6 +1,6 @@
 <div class="p-viewport">
-  <p-sidebar />
-  <p-topbar />
+  <p-sidebar v-if="shouldShowSidebar" />
+  <p-topbar :hide-menu="shouldShowSidebar" />
   <slot></slot>
   <p-footer />
 </div>

@@ -2,20 +2,25 @@
   <p-button
     class="p-sidebar-menu-button"
     :onClick="toggleSidebarVisibility"
+    aria-label="menu"
     data-sidebar-menu-button
     faceless>
-    <p-icon name="menu" />
+    <p-icon name="menu" aria-hidden="true"/>
   </p-button>
   <div class="p-sidebar-content"
     :class="sidebarVisibilityCssClass"
+    :aria-hidden="!sidebarVisibilityCssClass"
     data-sidebar-content>
     <p-button
       class="p-sidebar-arrow-button"
       :onClick="toggleSidebarVisibility"
+      v-if="!!sidebarVisibilityCssClass"
       data-sidebar-arrow-button
       faceless>
       <p-icon name="arrow" />
     </p-button>
-    <p-menu :onItemClick="onMenuItemClick" />
+    <p-menu
+      v-if="!!sidebarVisibilityCssClass"
+      :onItemClick="onMenuItemClick" />
   </div>
 </div>
