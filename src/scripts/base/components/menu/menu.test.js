@@ -1,5 +1,6 @@
 import { shallowMount } from '@vue/test-utils';
 import analyticsService from '@scripts/base/services/analytics/analytics';
+import routeService from '@scripts/base/services/route/route';
 import pMenu from './menu';
 
 describe('Menu', () => {
@@ -9,6 +10,7 @@ describe('Menu', () => {
 
   beforeEach(() => {
     analyticsService.trackEvent = jest.fn();
+    routeService.getQueryParams = jest.fn();
   });
 
   it('should have appropriate class', () => {
@@ -34,5 +36,16 @@ describe('Menu', () => {
     const wrapper = mount({ onItemClick });
     wrapper.vm.onMenuItemClick(itemMock);
     expect(onItemClick).toHaveBeenCalledWith(itemMock);
+  });
+
+  it('should render Github star button by default', () => {
+    const wrapper = mount();
+    expect(wrapper.vm.$el.querySelectorAll('[data-github-star-button]')).toHaveLength(1);
+  });
+
+  it('should optionally not render Github star button if prerender search param has been found on url', () => {
+    routeService.getQueryParams = jest.fn(() => ({ prerender: 'enabled' }))
+    const wrapper = mount();
+    expect(wrapper.vm.$el.querySelectorAll('[data-github-star-button]')).toHaveLength(0);
   });
 });

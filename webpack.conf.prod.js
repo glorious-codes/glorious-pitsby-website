@@ -6,6 +6,14 @@ const PrerenderSPAPlugin = require('prerender-spa-plugin');
 const Renderer = PrerenderSPAPlugin.PuppeteerRenderer;
 const project = require('./project.json');
 
+function getRoutes(){
+  return [
+    '/',
+    '/documentation',
+    '/privacy'
+  ].map(path => `${path}?analytics=disabled&prerender=enabled`)
+}
+
 module.exports = {
   mode: 'production',
   devtool: 'cheap-source-map',
@@ -33,11 +41,7 @@ module.exports = {
     }),
     new PrerenderSPAPlugin({
       staticDir: `${__dirname}/${project.scripts.dist.root}`,
-      routes: [
-        '/',
-        '/documentation',
-        '/privacy'
-      ],
+      routes: getRoutes(),
       minify: {
         collapseBooleanAttributes: true,
         collapseWhitespace: true,

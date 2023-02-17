@@ -2,6 +2,7 @@ import '@styles/menu.styl';
 import pGithubButtonWidget from '@scripts/base/components/github-button-widget/github-button-widget';
 import pLink from '@scripts/base/components/link/link';
 import analyticsService from '@scripts/base/services/analytics/analytics';
+import routeService from '@scripts/base/services/route/route';
 import template from './menu.html';
 
 const pMenu = {
@@ -31,6 +32,12 @@ const pMenu = {
     onMenuItemClick(item){
       analyticsService.trackEvent('clicked menu item', item);
       return this.onItemClick && this.onItemClick(item);
+    }
+  },
+  computed: {
+    shouldShowGithubStarButton(){
+      const { prerender } = routeService.getQueryParams() || {};
+      return prerender != 'enabled';
     }
   },
   template
