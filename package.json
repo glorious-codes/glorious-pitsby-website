@@ -29,6 +29,7 @@
     "copy-webpack-plugin": "^5.1.1",
     "css-loader": "^3.4.1",
     "eslint": "^6.8.0",
+    "file-loader": "^6.2.0",
     "firebase-tools": "^11.23.1",
     "html-loader": "^0.5.5",
     "html-loader-jest": "^0.2.1",

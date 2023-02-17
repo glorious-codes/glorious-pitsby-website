@@ -42,8 +42,12 @@
     }
   },
   "fonts": {
+    "source": {
+      "root": "src/fonts/"
+    },
     "dist": {
-      "root": "fonts/[name].[ext]"
+      "name": "[name].[ext]",
+      "root": "fonts/"
     }
   },
   "tests": {

@@ -26,6 +26,18 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: 'babel-loader'
+      },
+      {
+        test: /\.woff2(\?v=.*)?$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: project.fonts.dist.name,
+              outputPath: project.fonts.dist.root
+            }
+          }
+        ]
       }
     ]
   },
@@ -34,8 +46,7 @@ module.exports = {
       '@vue$': 'vue/dist/vue.esm.js',
       '@environment$': `${__dirname}/${project.environments.source.root}/${env}.js`,
       '@scripts': `${__dirname}/${project.scripts.source.root}`,
-      '@styles': `${__dirname}/${project.styles.source.root}`,
-
+      '@styles': `${__dirname}/${project.styles.source.root}`
     }
   },
   plugins: [
