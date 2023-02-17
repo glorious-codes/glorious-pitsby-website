@@ -2,7 +2,7 @@ export default [
   {
     id: 1,
     name: 'Lucas Cunha',
-    imageUrl: '/images/avatar-cunha.jpeg',
+    imageUrl: '/images/avatar-cunha_100.jpg',
     socialUrl: 'https://www.linkedin.com/in/lucas-felipe-da-cunha-06628969/',
     testimonial: 'Pitsby makes developers\' life really easy. No hassle, no pain, only gain.',
     jobTitle: 'Programmer',
@@ -12,7 +12,7 @@ export default [
   {
     id: 2,
     name: 'Jim Chien',
-    imageUrl: '/images/avatar-jim.jpeg',
+    imageUrl: '/images/avatar-jim_100.jpg',
     socialUrl: 'https://www.linkedin.com/in/jim-chien/',
     testimonial: 'Easy and maintainable!',
     jobTitle: 'Programmer',
@@ -22,7 +22,7 @@ export default [
   {
     id: 3,
     name: 'Fernando Rodrigues',
-    imageUrl: '/images/avatar-rodrigues.jpeg',
+    imageUrl: '/images/avatar-rodrigues_100.jpg',
     socialUrl: 'https://www.linkedin.com/in/fernahh/',
     testimonial: 'I love the playground feature. An easy and isolated way to play with components.',
     jobTitle: 'Programmer',
@@ -32,7 +32,7 @@ export default [
   {
     id: 4,
     name: 'Julio Lozovei',
-    imageUrl: '/images/avatar-lozovei.jpeg',
+    imageUrl: '/images/avatar-lozovei_100.jpg',
     socialUrl: 'https://www.linkedin.com/in/jlozovei/',
     testimonial: 'Pitsby is utterly awesome and easy - no more pain while documenting components, specially Vanilla!',
     jobTitle: 'Programmer',
