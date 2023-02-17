@@ -95,21 +95,13 @@ describe('Route Service', () => {
     expect(window.open).toHaveBeenCalledWith(`${url}?name=Jo%C3%A3o&surname=Guimar%C3%A3es`);
   });
 
-  it('should track route navigation', () => {
-    const toPathMock = '/mock';
+  it('should track route navigation', done => {
     routeService.setRouter(router);
-    router.afterHooks[0]({
-      path: toPathMock
+    router.afterHooks[0]();
+    setTimeout(() => {
+      expect(window.scrollTo).toHaveBeenCalledWith(0,0);
+      expect(analyticsService.trackPageView).toHaveBeenCalled();
+      done();
     });
-    expect(analyticsService.trackPageView).toHaveBeenCalledWith(toPathMock);
-  });
-
-  it('should scroll to top on route navigation', () => {
-    const toPathMock = '/mock';
-    routeService.setRouter(router);
-    router.afterHooks[0]({
-      path: toPathMock
-    });
-    expect(window.scrollTo).toHaveBeenCalledWith(0,0);
   });
 });

@@ -39,9 +39,9 @@ _public.openUrl = (url, params) => {
 };
 
 function startTrackingRouteNavigation(){
-  router.afterEach(to => {
+  router.afterEach(() => {
     window.scrollTo(0,0);
-    analyticsService.trackPageView(to.path);
+    setTimeout(() => analyticsService.trackPageView())
   });
 }
 

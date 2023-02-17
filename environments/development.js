@@ -3,12 +3,9 @@ export default {
     BASE_URL: 'http://localhost:7000'
   },
   ANALYTICS: {
-    GOOGLE: {
-      BASE_URL: 'https://www.googletagmanager.com/gtag/js',
-      ID: 'UA-157883890-1'
-    },
-    MIXPANEL: {
-      TOKEN: 'bb70f8a4b33655a5e0050502fd40642a'
+    PLAUSIBLE: {
+      DOMAIN: 'dev.pitsby.com',
+      OPTIONS: { trackLocalhost: false }
     }
   },
   VERVET: {
