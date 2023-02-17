@@ -1,58 +1,13 @@
-<ul class="p-features-list">
-  <li>
-    <p-icon name="lightning" />
-    <h3>
-      Lightning Setup
-    </h3>
-    <p>
-      No rules. No loaders. No regex. Ship your docs with a couple of super
-      simple declarations.
-    </p>
-  </li>
-  <li>
-    <p-icon name="cog" />
-    <h3>
-      Wide Support
-    </h3>
-    <p>
-      Support for legacy and modern frameworks. Perfect for companies migrating
-      from AngularJS to Vue or React.
-    </p>
-  </li>
-  <li>
-    <p-icon name="ball" />
-    <h3>
-      Playground
-    </h3>
-    <p>
-      Prototype and share component compositions with your workmates.
-    </p>
-  </li>
-  <li>
-    <p-icon name="chart" />
-    <h3>
-      Analytics Integration
-    </h3>
-    <p>
-      Find out which components people are most interested in.
-    </p>
-  </li>
-  <li>
-    <p-icon name="tools" />
-    <h3>
-      Fully Customizable
-    </h3>
-    <p>
-      Use your own logo, favicon, window title and everything else you want.
-    </p>
-  </li>
-  <li>
-    <p-icon name="heart" />
-    <h3>
-      Open Source
-    </h3>
-    <p>
-      Forever free and lovely crafted.
-    </p>
-  </li>
-</ul>
+<p-lazy-load>
+  <ul class="p-features-list">
+    <li v-for="feature in features">
+      <p-icon :name="feature.iconName" />
+      <h3>
+        {{ feature.title }}
+      </h3>
+      <p>
+        {{ feature.description }}
+      </p>
+    </li>
+  </ul>
+</p-lazy-load>

@@ -8,6 +8,6 @@ describe('Features List', () => {
 
   it('should have appropriate css class', () => {
     const wrapper = mount();
-    expect(wrapper.classes()).toContain('p-features-list');
+    expect(wrapper.find('ul').classes()).toContain('p-features-list');
   });
 });

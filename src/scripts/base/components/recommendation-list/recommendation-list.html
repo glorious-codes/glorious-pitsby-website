@@ -4,7 +4,9 @@
     v-for="recommendation in recommendations"
     :key="recommendation.id">
     <div class="p-recommendation-item-image">
-      <img :src="recommendation.imageUrl" :alt="recommendation.name" width="100" height="100" />
+      <p-lazy-load>
+        <img :src="recommendation.imageUrl" :alt="recommendation.name" width="100" height="100" />
+      </p-lazy-load>
     </div>
     <h3>
       <p-link :href="recommendation.socialUrl" target="_blank">
