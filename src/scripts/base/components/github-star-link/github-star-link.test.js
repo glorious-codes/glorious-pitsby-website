@@ -1,4 +1,5 @@
 import { shallowMount } from '@vue/test-utils';
+import githubResource from '@scripts/base/resources/github';
 import pGithubStarLink from './github-star-link';
 
 describe('Github Star Link', () => {
@@ -6,11 +7,13 @@ describe('Github Star Link', () => {
     return shallowMount(pGithubStarLink, { propsData });
   }
 
-  function stubFetch({ url, response } = {}){
-    window.fetch = jest.fn(urlParam => {
-      if(urlParam === url) return Promise.resolve({ json: () => Promise.resolve(response) });
-      return Promise.resolve({ json: () => Promise.resolve({}) });
-    });
+  function stubFetch(){
+    githubResource.getRepo = jest.fn(({ repo }) => {
+      const response = {
+        'user/repo': { stargazers_count: 86 }
+      }[repo] || {}
+      return Promise.resolve(response);
+    })
   }
 
   beforeEach(() => {
@@ -29,10 +32,6 @@ describe('Github Star Link', () => {
 
   it('should show the number of stars received by the given repo', done => {
     const repo = 'user/repo';
-    stubFetch({
-      url: `https://api.github.com/repos/${repo}`,
-      response: { stargazers_count: 86 }
-    });
     const wrapper = mount({ repo });
     setTimeout(() => {
       expect(wrapper.find('[data-github-star-link-count]').text()).toEqual('86');

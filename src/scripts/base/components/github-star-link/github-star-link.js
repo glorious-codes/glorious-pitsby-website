@@ -1,4 +1,5 @@
 import '@styles/github-star-link.styl';
+import githubResource from '@scripts/base/resources/github';
 import template from './github-star-link.html';
 
 const pGithubStarLink = {
@@ -10,14 +11,11 @@ const pGithubStarLink = {
     };
   },
   mounted(){
-    window.fetch(this.buildUrl(this.repo))
-      .then(response => response.json())
-      .then(({ stargazers_count }) => this.setStars(stargazers_count));
+    githubResource.getRepo({ repo: this.repo }).then(({ stargazers_count }) => {
+      this.setStars(stargazers_count);
+    });
   },
   methods: {
-    buildUrl(){
-      return `https://api.github.com/repos/${this.repo}`;
-    },
     setStars(stars){
       this.stars = stars;
     }
