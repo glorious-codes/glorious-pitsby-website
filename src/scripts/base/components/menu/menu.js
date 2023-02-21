@@ -1,17 +1,19 @@
 import '@styles/menu.styl';
-import pGithubButtonWidget from '@scripts/base/components/github-button-widget/github-button-widget';
+import pGithubStarLink from '@scripts/base/components/github-star-link/github-star-link';
 import pLink from '@scripts/base/components/link/link';
-import analyticsService from '@scripts/base/services/analytics/analytics';
 import routeService from '@scripts/base/services/route/route';
 import template from './menu.html';
 
 const pMenu = {
   name: 'p-menu',
   components: {
-    pGithubButtonWidget,
+    pGithubStarLink,
     pLink
   },
   props: {
+    hideGithubStarLink: {
+      type: Boolean
+    },
     onItemClick: {
       type: Function
     }
@@ -30,14 +32,13 @@ const pMenu = {
   },
   methods: {
     onMenuItemClick(item){
-      analyticsService.trackEvent('clicked menu item', item);
-      return this.onItemClick && this.onItemClick(item);
+      this.onItemClick && this.onItemClick(item);
     }
   },
   computed: {
     shouldShowGithubStarButton(){
       const { prerender } = routeService.getQueryParams() || {};
-      return prerender != 'enabled';
+      return !this.hideGithubStarLink && prerender != 'enabled';
     }
   },
   template

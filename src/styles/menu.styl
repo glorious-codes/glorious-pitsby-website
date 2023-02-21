@@ -2,8 +2,6 @@
 @require '_mixins';
 
 .p-menu
-  .p-menu-item-github-button
-    min-width 74px
   .p-github-button-widget
     position relative
     top 5px
@@ -18,7 +16,7 @@
       margin-left 40px
     & + li
       margin-top 0
-  a
+  a:not(.p-github-star-link)
     font-size $font-size-xxs
     font-weight bold
     text-transform uppercase

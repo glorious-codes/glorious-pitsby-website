@@ -1,6 +1,6 @@
 import { shallowMount } from '@vue/test-utils';
-import analyticsService from '@scripts/base/services/analytics/analytics';
 import routeService from '@scripts/base/services/route/route';
+import pGithubStarLink from '@scripts/base/components/github-star-link/github-star-link';
 import pMenu from './menu';
 
 describe('Menu', () => {
@@ -9,7 +9,6 @@ describe('Menu', () => {
   }
 
   beforeEach(() => {
-    analyticsService.trackEvent = jest.fn();
     routeService.getQueryParams = jest.fn();
   });
 
@@ -23,13 +22,6 @@ describe('Menu', () => {
     expect(wrapper.findAll('li').length).toEqual(7);
   });
 
-  it('should track menu item click', () => {
-    const itemMock = { name: 'Features' };
-    const wrapper = mount();
-    wrapper.vm.onMenuItemClick(itemMock);
-    expect(analyticsService.trackEvent).toHaveBeenCalledWith('clicked menu item', itemMock);
-  });
-
   it('should execute item click listener on menu item click', () => {
     const itemMock = { some: 'item' };
     const onItemClick = jest.fn();
@@ -40,12 +32,12 @@ describe('Menu', () => {
 
   it('should render Github star button by default', () => {
     const wrapper = mount();
-    expect(wrapper.vm.$el.querySelectorAll('[data-github-star-button]')).toHaveLength(1);
+    expect(wrapper.findAll(pGithubStarLink)).toHaveLength(1);
   });
 
   it('should optionally not render Github star button if prerender search param has been found on url', () => {
     routeService.getQueryParams = jest.fn(() => ({ prerender: 'enabled' }))
     const wrapper = mount();
-    expect(wrapper.vm.$el.querySelectorAll('[data-github-star-button]')).toHaveLength(0);
+    expect(wrapper.findAll(pGithubStarLink)).toHaveLength(0);
   });
 });
