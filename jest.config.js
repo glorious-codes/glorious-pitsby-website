@@ -20,7 +20,7 @@ module.exports = {
     '@styles\/(.*)$': `<rootDir>/${project.styles.source.root}$1`,
     '^.+\\.(css|styl)$': '<rootDir>/src/scripts/base/mocks/raw-files.js'
   },
-  setupFilesAfterEnv: ['<rootDir>/src/scripts/base/mocks/global.js'],
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   transform: {
     '^.+\\.(css|styl)$': '<rootDir>/src/scripts/base/mocks/raw-files.js',
     '^.+\\.js$': 'babel-jest',
