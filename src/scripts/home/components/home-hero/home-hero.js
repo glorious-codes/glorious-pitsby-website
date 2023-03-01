@@ -3,6 +3,7 @@ import VIEWPORT from '@scripts/base/constants/viewport';
 import windowService from '@scripts/base/services/window/window';
 import pArrowLink from '@scripts/base/components/arrow-link/arrow-link';
 import pGithubStarLink from '@scripts/base/components/github-star-link/github-star-link';
+import pPostpone from '@scripts/base/components/postpone/postpone';
 
 import pHero from '@scripts/base/components/hero/hero';
 import pImg from '@scripts/base/components/img/img';
@@ -13,6 +14,7 @@ const pHomeHero = {
   components: {
     pArrowLink,
     pGithubStarLink,
+    pPostpone,
     pHero,
     pImg
   },
