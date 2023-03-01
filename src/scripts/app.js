@@ -6,6 +6,7 @@ import routes from '@scripts/routes';
 import template from '@scripts/app.html';
 import analyticsService from '@scripts/base/services/analytics/analytics';
 import routeService from '@scripts/base/services/route/route';
+import('@scripts/base/services/webfont/webfont').then(({ init }) => init());
 
 Vue.use(VueHead, {
   separator: '',
