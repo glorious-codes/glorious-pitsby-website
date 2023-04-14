@@ -1,3 +1,4 @@
+import pAdoptersList from '@scripts/base/components/adopters-list/adopters-list';
 import pBasicUsage from '@scripts/base/components/basic-usage/basic-usage';
 import pButton from '@scripts/base/components/button/button';
 import pCol from '@scripts/base/components/col/col';
@@ -20,6 +21,7 @@ const head = seoService.buildHead({
 const homeView = {
   name: 'p-home-view',
   components: {
+    pAdoptersList,
     pBasicUsage,
     pButton,
     pCol,
