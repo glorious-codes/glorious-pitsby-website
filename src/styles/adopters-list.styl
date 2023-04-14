@@ -1,0 +1,30 @@
+@require '_variables'
+@require '_mixins'
+
+.p-adopters-list
+  display grid
+  grid-template-columns 1fr 1fr 1fr
+  margin 0 auto
+  padding 0
+  max-width 1000px
+  list-style-type none
+  li
+    display flex
+    flex-direction column
+    align-items center
+    justify-content center
+    & + li
+      margin-top 0
+
+.p-adopters-item-cta
+  display flex
+  align-items center
+  height 90px
+  font-size $font-size-xxs
+  font-weight bold
+  text-transform uppercase
+
++breakpoint('xs')
+  .p-adopters-list
+    grid-template-columns 1fr
+    grid-gap 80px 20px
