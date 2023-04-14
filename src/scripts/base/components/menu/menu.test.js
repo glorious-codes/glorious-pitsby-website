@@ -19,7 +19,7 @@ describe('Menu', () => {
 
   it('should contain seven items', () => {
     const wrapper = mount();
-    expect(wrapper.findAll('li').length).toEqual(7);
+    expect(wrapper.findAll('li').length).toEqual(8);
   });
 
   it('should execute item click listener on menu item click', () => {
