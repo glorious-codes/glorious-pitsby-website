@@ -14,6 +14,11 @@ describe('Alert', () => {
     expect(wrapper.classes()).toContain('p-alert');
   });
 
+  it('should optionally set a success info', () => {
+    const wrapper = mount({ theme: 'info' });
+    expect(wrapper.classes()).toContain('p-alert-info');
+  });
+
   it('should optionally set a success alert', () => {
     const wrapper = mount({ theme: 'success' });
     expect(wrapper.classes()).toContain('p-alert-success');

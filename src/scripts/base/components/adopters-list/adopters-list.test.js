@@ -8,13 +8,13 @@ describe('Adopters List', () => {
 
   it('should have appropriate class', () => {
     const wrapper = mountComponent();
-    expect(wrapper.classes()).toContain('p-adopters-list');
+    expect(wrapper.classes()).toContain('p-adopters-list-wrapper');
   });
 
 
   it('should contain a link to Pitsby adopter form', () => {
     const wrapper = mountComponent();
     const links = wrapper.findAll('a');
-    expect(links.at(4).attributes('href')).toEqual('https://forms.gle/X8JuWQRFjrqoUK4P7');
+    expect(links.at(6).attributes('href')).toEqual('https://forms.gle/X8JuWQRFjrqoUK4P7');
   });
 });

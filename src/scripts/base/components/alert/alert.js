@@ -27,7 +27,7 @@ const pAlert = {
 };
 
 function isThemeValid(theme){
-  return ['success', 'danger'].includes(theme);
+  return ['success', 'danger', 'info'].includes(theme);
 }
 
 export default pAlert;
