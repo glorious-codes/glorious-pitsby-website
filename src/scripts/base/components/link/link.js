@@ -6,6 +6,9 @@ export default {
     href: {
       type: String
     },
+    rel: {
+      type: String
+    },
     target: {
       type: String,
       default: '_blank'
