@@ -15,14 +15,20 @@
     max-width 400px
 
 .p-setup-engine-list
-  margin 0 auto 40px
+  display flex
+  justify-content center
+  margin 20px auto 40px
   padding 0
   max-width 600px
 
 .p-setup-engine-item
-  display inline-block
+  display flex
+  align-items center
+  margin 0
   &:not(:first-child)
     margin-left 20px
+  input[type="radio"]
+    margin 0 5px 0 0
 
 .p-setup-code-wrapper
   display grid

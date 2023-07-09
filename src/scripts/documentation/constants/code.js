@@ -54,7 +54,35 @@ module.exports = {
     './dist/etc/'
   ],
   metrics: {
-    googleAnalyticsId: 'UA-XXXXXXXXX-X'
+    // You can choose one, and only one, of the following
+    // alternatives to track pageviews:
+    // A) Google Analytics
+    // Supports Universal Analytics and Google Analytics 4 properties
+    googleAnalyticsId: 'UA-XXXXXXXXX-X',
+    // B) Plausible
+    plausibleId: 'mysite.com',
+    plausibleOptions: {
+      // By default, Plausible does not track events on localhost.
+      // You can enable localhost tracking by passing the following option:
+      trackLocalhost: true
+      // To see all available options, visit:
+      // https://github.com/plausible/plausible-tracker#usage
+    }
+  },
+  // You can optionally control Pitsby's color scheme (light/dark).
+  colorScheme: {
+    // In addition, you can set the color scheme used on Pitsby's first render.
+    initial: 'dark',
+    // If your components support both light/dark color schemes, you can
+    // listen for changes made by the user and theme you components accordingly.
+    onChange: function(scheme){
+      // This function receives the color scheme (light/dark) just selected by the user.
+      // With the selected color scheme in hands, you can appropriately adjust the
+      // theme of you component library.
+      // HEADS UP! This function gets executed at browser's runtime, not Node's.
+      // So you won't have access here to anything you eventually required in the
+      // configuration file using commonjs.
+    }
   },
   custom: {
     favicon: {
