@@ -91,7 +91,10 @@ module.exports = {
     },
     logo: {
       // This image should be included in the 'other' attribute above
-      filepath: './some/path/to/image.svg',
+      filepath: './some/path/to/logo.svg',
+      // If your documentation support dark color scheme,
+      // you can set an optional dark version of your logo.
+      darkVersionFilepath: './some/path/to/dark-logo.svg',
       width: '100px',
       height: '100px'
     },
