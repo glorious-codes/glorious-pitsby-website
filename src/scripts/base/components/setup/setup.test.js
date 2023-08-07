@@ -54,8 +54,8 @@ describe('Setup', () => {
   it('should contain four engine options', () => {
     const wrapper = mount();
     const inputs = findInputsInWrapper(wrapper);
-    expect(inputs[0].getAttribute('value')).toEqual('vue');
-    expect(inputs[1].getAttribute('value')).toEqual('react');
+    expect(inputs[0].getAttribute('value')).toEqual('react');
+    expect(inputs[1].getAttribute('value')).toEqual('vue');
     expect(inputs[2].getAttribute('value')).toEqual('angular');
     expect(inputs[3].getAttribute('value')).toEqual('vanilla');
   });
@@ -67,13 +67,13 @@ describe('Setup', () => {
     expect(gDemoInstanceMock.openApp).toHaveBeenCalledWith('editor', {
       minHeight: '800px',
       inanimate: true,
-      initialContent: VUE.CONFIG.INITIAL,
+      initialContent: REACT.CONFIG.INITIAL,
       windowTitle: 'pitsby.config.js'
     });
     expect(gDemoInstanceMock.openApp).toHaveBeenCalledWith('editor', {
       minHeight: '800px',
       inanimate: true,
-      initialContent: VUE.DOC.INITIAL,
+      initialContent: REACT.DOC.INITIAL,
       windowTitle: 'button.doc.js'
     });
     expect(gDemoInstanceMock.end.mock.calls.length).toEqual(2);
@@ -87,13 +87,13 @@ describe('Setup', () => {
       expect(gDemoInstanceMock.openApp.mock.calls[2][1]).toEqual({
         minHeight: '800px',
         inanimate: true,
-        initialContent: REACT.CONFIG.INITIAL,
+        initialContent: VUE.CONFIG.INITIAL,
         windowTitle: 'pitsby.config.js'
       });
       expect(gDemoInstanceMock.openApp.mock.calls[3][1]).toEqual({
         minHeight: '800px',
         inanimate: true,
-        initialContent: REACT.DOC.INITIAL,
+        initialContent: VUE.DOC.INITIAL,
         windowTitle: 'button.doc.js'
       });
       done();

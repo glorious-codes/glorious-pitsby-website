@@ -16,12 +16,12 @@ const pSetup = {
   data(){
     return {
       engines: [
-        {value: 'vue', text: 'Vue'},
         {value: 'react', text: 'React'},
+        {value: 'vue', text: 'Vue'},
         {value: 'angular', text: 'AngularJS'},
         {value: 'vanilla', text: 'Vanilla'}
       ],
-      selectedEngine: 'vue'
+      selectedEngine: 'react'
     };
   },
   mounted(){
