@@ -26,8 +26,7 @@ const pMenu = {
         { text: 'Documentation', to: 'documentation', cssClass: '' },
         { text: 'Adopters', href: '/#adopters', target: '_self', cssClass: '' },
         { text: 'Recommendations', href: '/#recommendations', target: '_self', cssClass: '' },
-        { text: 'Contribute', href: 'https://github.com/glorious-codes/glorious-pitsby', target: '_blank', cssClass: 'p-menu-item-contribute' },
-        { text: 'Donate', href: 'https://www.buymeacoffee.com/gloriouscodes', target: '_blank' }
+        { text: 'Contribute', href: 'https://github.com/glorious-codes/glorious-pitsby', target: '_blank', cssClass: 'p-menu-item-contribute' }
       ]
     };
   },
