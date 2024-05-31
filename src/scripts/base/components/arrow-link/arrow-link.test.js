@@ -12,7 +12,7 @@ describe('Arrow Link', () => {
   });
 
   it('should render a href', () => {
-    const href = 'https://demo.pitsby.com';
+    const href = 'https://pitsby-demo.compilorama.com';
     const wrapper = mount({ href });
     expect(wrapper.find('a').attributes('href')).toEqual(href);
   });

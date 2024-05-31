@@ -22,19 +22,19 @@ describe('Link', () => {
   });
 
   it('should render an anchor href', () => {
-    const href = 'https://pitsby.com';
+    const href = 'https://pitsby.compilorama.com';
     const wrapper = mountComponent({ href });
     expect(wrapper.find('a').attributes('href')).toEqual(href);
   });
 
   it('should render some text for external links', () => {
     const text = 'Pitsby';
-    const wrapper = mountComponent({ href: 'https://pitsby.com' }, text);
+    const wrapper = mountComponent({ href: 'https://pitsby.compilorama.com' }, text);
     expect(wrapper.find('a').text()).toEqual(text);
   });
 
   it('should anchor links contain a target attribute as blank by default', () => {
-    const wrapper = mountComponent({ href: 'https://pitsby.com' });
+    const wrapper = mountComponent({ href: 'https://pitsby.compilorama.com' });
     expect(wrapper.find('a').attributes('target')).toEqual('_blank');
   });
 
@@ -45,7 +45,7 @@ describe('Link', () => {
   });
 
   it('should execute click listener on link click', () => {
-    const link = { href: 'https://pitsby.com', routeName: 'home', target: '_self' };
+    const link = { href: 'https://pitsby.compilorama.com', routeName: 'home', target: '_self' };
     const onClick = jest.fn();
     const wrapper = mountComponent({ onClick, ...link });
     wrapper.vm.onLinkClick();

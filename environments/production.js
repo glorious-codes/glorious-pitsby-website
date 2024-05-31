@@ -1,6 +1,6 @@
 export default {
   APP: {
-    BASE_URL: 'https://pitsby.com'
+    BASE_URL: 'https://pitsby.compilorama.com'
   },
   ANALYTICS: {
     PLAUSIBLE: {

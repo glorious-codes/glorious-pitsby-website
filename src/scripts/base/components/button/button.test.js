@@ -28,7 +28,7 @@ describe('Button', () => {
   });
 
   it('should optionally set an anchor href', () => {
-    const href = 'https://pitsby.com';
+    const href = 'https://pitsby.compilorama.com';
     const wrapper = mount({ tag: 'a', href });
     expect(wrapper.attributes('href')).toEqual(href);
   });
